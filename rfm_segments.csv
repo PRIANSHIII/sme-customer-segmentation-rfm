@@ -1,0 +1,801 @@
+customer_id,company_name,industry,region,employee_count,segment,recency,frequency,monetary,R_score,F_score,M_score,RFM_total,products_owned,crosssell_opportunity_score,relationship_manager
+SME0001,Company 1 Ltd,Manufacturing,South,200,New Customers,51,7,81218.0,5,2,3,3.3333333333333335,5,0.95,RM015
+SME0002,Company 2 Ltd,Food & Beverage,North,5,Loyal Customers,118,31,1027562.0,3,4,4,3.6666666666666665,7,0.0,RM007
+SME0003,Company 3 Ltd,Professional Services,West,200,At Risk,164,6,39990.0,3,2,2,2.3333333333333335,5,0.67,RM004
+SME0004,Company 4 Ltd,Professional Services,South,50,Potential Loyalists,102,9,34714.0,4,3,2,3.0,5,0.86,RM001
+SME0005,Company 5 Ltd,Retail,North,100,Lost,195,8,45646.0,2,2,2,2.0,5,0.57,RM013
+SME0006,Company 6 Ltd,Retail,East,25,Champions,75,44,2675755.0,4,5,5,4.666666666666667,7,0.0,RM020
+SME0007,Company 7 Ltd,Retail,Central,25,Champions,44,37,928111.0,5,4,4,4.333333333333333,7,0.0,RM007
+SME0008,Company 8 Ltd,Construction,North,25,Loyal Customers,153,13,77624.0,3,3,3,3.0,6,0.43,RM015
+SME0009,Company 9 Ltd,Professional Services,East,50,New Customers,106,8,66278.0,4,2,3,3.0,6,0.43,RM014
+SME0010,Company 10 Ltd,Professional Services,North,5,Champions,70,48,1630102.0,4,5,5,4.666666666666667,7,0.0,RM019
+SME0011,Company 11 Ltd,Retail,Central,5,Can't Lose Them,201,10,81697.0,2,3,3,2.6666666666666665,5,0.76,RM020
+SME0012,Company 12 Ltd,Food & Beverage,Central,10,Potential Loyalists,156,13,47453.0,3,3,2,2.6666666666666665,6,0.38,RM018
+SME0013,Company 13 Ltd,Construction,South,50,At Risk,140,5,25765.0,3,2,2,2.3333333333333335,3,1.33,RM010
+SME0014,Company 14 Ltd,Retail,West,10,Lost,225,1,2488.0,2,1,1,1.3333333333333333,1,1.14,RM009
+SME0015,Company 15 Ltd,Retail,North,50,Champions,24,59,3986183.0,5,5,5,5.0,7,0.0,RM008
+SME0016,Company 16 Ltd,Retail,North,200,Hibernating,229,8,100686.0,2,2,3,2.3333333333333335,5,0.67,RM010
+SME0017,Company 17 Ltd,Manufacturing,East,5,Lost,598,2,6170.0,1,1,2,1.3333333333333333,2,0.95,RM017
+SME0018,Company 18 Ltd,Healthcare,Central,50,Champions,108,18,196610.0,4,4,4,4.0,7,0.0,RM002
+SME0019,Company 19 Ltd,Healthcare,North,25,Loyal Customers,139,16,99355.0,3,3,3,3.0,6,0.43,RM006
+SME0020,Company 20 Ltd,Manufacturing,Central,100,Lost,330,4,10157.0,1,2,2,1.6666666666666667,3,0.95,RM005
+SME0021,Company 21 Ltd,Professional Services,North,10,Lost,230,7,51368.0,2,2,2,2.0,6,0.29,RM009
+SME0022,Company 22 Ltd,Retail,South,50,Champions,39,36,878784.0,5,4,4,4.333333333333333,7,0.0,RM005
+SME0023,Company 23 Ltd,Manufacturing,West,100,Can't Lose Them,181,9,130028.0,2,3,3,2.6666666666666665,6,0.38,RM018
+SME0024,Company 24 Ltd,Manufacturing,North,200,Potential Loyalists,172,10,62244.0,3,3,2,2.6666666666666665,5,0.76,RM020
+SME0025,Company 25 Ltd,Healthcare,Central,50,Loyal Customers,146,11,131549.0,3,3,3,3.0,7,0.0,RM009
+SME0026,Company 26 Ltd,Construction,South,25,New Customers,113,6,73668.0,4,2,3,3.0,5,0.86,RM017
+SME0027,Company 27 Ltd,Retail,North,50,Champions,40,52,1165676.0,5,5,4,4.666666666666667,7,0.0,RM017
+SME0028,Company 28 Ltd,Healthcare,East,100,Champions,7,104,30451719.0,5,5,5,5.0,7,0.0,RM012
+SME0029,Company 29 Ltd,Professional Services,West,25,At Risk,159,4,9711.0,3,2,2,2.3333333333333335,3,1.33,RM007
+SME0030,Company 30 Ltd,Retail,North,5,Lost,389,2,8232.0,1,1,2,1.3333333333333333,2,0.95,RM003
+SME0031,Company 31 Ltd,Professional Services,South,200,Loyal Customers,66,14,153510.0,4,3,4,3.6666666666666665,6,0.52,RM010
+SME0032,Company 32 Ltd,Retail,East,50,Lost,539,2,4846.0,1,1,1,1.0,2,0.71,RM002
+SME0033,Company 33 Ltd,Retail,South,50,Lost,325,4,5027.0,1,2,2,1.6666666666666667,4,0.71,RM003
+SME0034,Company 34 Ltd,Food & Beverage,South,10,Champions,17,87,26179225.0,5,5,5,5.0,7,0.0,RM016
+SME0035,Company 35 Ltd,Food & Beverage,East,50,Lost,302,2,1296.0,2,1,1,1.3333333333333333,2,0.95,RM002
+SME0036,Company 36 Ltd,Construction,South,25,Champions,52,19,215301.0,5,4,4,4.333333333333333,6,0.62,RM010
+SME0037,Company 37 Ltd,Manufacturing,East,50,Loyal Customers,167,18,92213.0,3,4,3,3.3333333333333335,7,0.0,RM006
+SME0038,Company 38 Ltd,Retail,North,5,Can't Lose Them,187,13,199805.0,2,3,4,3.0,5,0.86,RM011
+SME0039,Company 39 Ltd,Professional Services,East,50,Lost,492,4,7283.0,1,2,2,1.6666666666666667,3,0.95,RM007
+SME0040,Company 40 Ltd,Healthcare,East,500,Hibernating,297,8,93165.0,2,2,3,2.3333333333333335,5,0.67,RM015
+SME0041,Company 41 Ltd,Retail,West,5,Champions,55,56,1950985.0,4,5,5,4.666666666666667,7,0.0,RM006
+SME0042,Company 42 Ltd,Healthcare,East,200,Champions,70,56,2892413.0,4,5,5,4.666666666666667,7,0.0,RM020
+SME0043,Company 43 Ltd,Retail,East,25,Lost,315,3,1865.0,2,1,1,1.3333333333333333,3,0.76,RM009
+SME0044,Company 44 Ltd,Food & Beverage,North,100,Loyal Customers,114,10,82132.0,3,3,3,3.0,5,0.86,RM020
+SME0045,Company 45 Ltd,Manufacturing,West,50,Can't Lose Them,211,17,134726.0,2,4,3,3.0,7,0.0,RM012
+SME0046,Company 46 Ltd,Professional Services,Central,25,Lost,507,1,1167.0,1,1,1,1.0,1,0.86,RM019
+SME0047,Company 47 Ltd,Manufacturing,North,50,At Risk,172,5,17591.0,3,2,2,2.3333333333333335,3,1.33,RM020
+SME0048,Company 48 Ltd,Healthcare,North,100,Loyal Customers,159,13,79270.0,3,3,3,3.0,6,0.43,RM003
+SME0049,Company 49 Ltd,Healthcare,Central,25,Lost,283,2,4411.0,2,1,1,1.3333333333333333,2,0.95,RM015
+SME0050,Company 50 Ltd,Retail,East,10,Lost,301,3,8549.0,2,1,2,1.6666666666666667,2,1.19,RM002
+SME0051,Company 51 Ltd,Food & Beverage,South,50,Potential Loyalists,77,13,61271.0,4,3,2,3.0,6,0.43,RM002
+SME0052,Company 52 Ltd,Construction,West,100,Can't Lose Them,206,16,70194.0,2,3,3,2.6666666666666665,6,0.38,RM003
+SME0053,Company 53 Ltd,Food & Beverage,South,50,Lost,264,5,13659.0,2,2,2,2.0,3,1.14,RM006
+SME0054,Company 54 Ltd,Food & Beverage,Central,50,Lost,335,2,3094.0,1,1,1,1.0,2,0.71,RM015
+SME0055,Company 55 Ltd,Professional Services,North,25,Champions,33,40,1165633.0,5,5,4,4.666666666666667,7,0.0,RM010
+SME0056,Company 56 Ltd,Food & Beverage,North,100,Loyal Customers,119,18,189497.0,3,4,4,3.6666666666666665,6,0.52,RM009
+SME0057,Company 57 Ltd,Retail,West,5,Loyal Customers,61,14,187976.0,4,3,4,3.6666666666666665,6,0.52,RM001
+SME0058,Company 58 Ltd,Retail,North,25,Lost,274,2,2433.0,2,1,1,1.3333333333333333,2,0.95,RM016
+SME0059,Company 59 Ltd,Retail,North,5,Loyal Customers,141,13,179871.0,3,3,4,3.3333333333333335,6,0.48,RM006
+SME0060,Company 60 Ltd,Manufacturing,West,10,Champions,27,26,1755071.0,5,4,5,4.666666666666667,7,0.0,RM009
+SME0061,Company 61 Ltd,Manufacturing,West,25,Loyal Customers,114,31,1784369.0,3,4,5,4.0,7,0.0,RM004
+SME0062,Company 62 Ltd,Manufacturing,Central,25,Loyal Customers,154,19,96222.0,3,4,3,3.3333333333333335,7,0.0,RM002
+SME0063,Company 63 Ltd,Construction,North,50,Lost,636,1,2669.0,1,1,1,1.0,1,0.86,RM004
+SME0064,Company 64 Ltd,Manufacturing,North,25,Can't Lose Them,266,11,108396.0,2,3,3,2.6666666666666665,5,0.76,RM001
+SME0065,Company 65 Ltd,Manufacturing,Central,25,Champions,86,27,1971129.0,4,4,5,4.333333333333333,6,0.62,RM019
+SME0066,Company 66 Ltd,Healthcare,East,10,Hibernating,197,7,96915.0,2,2,3,2.3333333333333335,5,0.67,RM010
+SME0067,Company 67 Ltd,Retail,East,25,Potential Loyalists,177,15,48139.0,3,3,2,2.6666666666666665,7,0.0,RM015
+SME0068,Company 68 Ltd,Construction,East,10,Champions,27,38,1294127.0,5,5,4,4.666666666666667,7,0.0,RM019
+SME0069,Company 69 Ltd,Retail,Central,5,Can't Lose Them,223,19,240654.0,2,4,4,3.3333333333333335,7,0.0,RM016
+SME0070,Company 70 Ltd,Food & Beverage,North,50,Loyal Customers,123,17,167368.0,3,4,4,3.6666666666666665,7,0.0,RM004
+SME0071,Company 71 Ltd,Construction,Central,50,Lost,447,4,3436.0,1,2,1,1.3333333333333333,2,0.95,RM002
+SME0072,Company 72 Ltd,Retail,Central,50,At Risk,148,3,3318.0,3,1,1,1.6666666666666667,3,0.95,RM013
+SME0073,Company 73 Ltd,Retail,East,25,Champions,47,28,1173454.0,5,4,4,4.333333333333333,7,0.0,RM001
+SME0074,Company 74 Ltd,Construction,South,25,Lost,533,1,1844.0,1,1,1,1.0,1,0.86,RM017
+SME0075,Company 75 Ltd,Professional Services,North,100,Champions,21,70,20731331.0,5,5,5,5.0,7,0.0,RM013
+SME0076,Company 76 Ltd,Professional Services,East,25,Champions,66,31,1621215.0,4,4,5,4.333333333333333,7,0.0,RM004
+SME0077,Company 77 Ltd,Construction,South,25,Potential Loyalists,76,12,39780.0,4,3,2,3.0,6,0.43,RM007
+SME0078,Company 78 Ltd,Retail,South,5,Loyal Customers,147,17,180234.0,3,4,4,3.6666666666666665,7,0.0,RM017
+SME0079,Company 79 Ltd,Manufacturing,West,10,Champions,45,28,447856.0,5,4,4,4.333333333333333,7,0.0,RM009
+SME0080,Company 80 Ltd,Retail,North,25,Champions,12,80,32604208.0,5,5,5,5.0,7,0.0,RM004
+SME0081,Company 81 Ltd,Construction,South,25,Lost,263,6,37342.0,2,2,2,2.0,5,0.57,RM019
+SME0082,Company 82 Ltd,Professional Services,East,25,Lost,215,4,5527.0,2,2,2,2.0,4,0.86,RM001
+SME0083,Company 83 Ltd,Manufacturing,West,25,Lost,594,1,2792.0,1,1,1,1.0,1,0.86,RM010
+SME0084,Company 84 Ltd,Retail,North,50,Lost,368,4,7578.0,1,2,2,1.6666666666666667,3,0.95,RM004
+SME0085,Company 85 Ltd,Manufacturing,Central,50,Champions,19,22,654692.0,5,4,4,4.333333333333333,6,0.62,RM009
+SME0086,Company 86 Ltd,Manufacturing,East,100,Can't Lose Them,189,16,50576.0,2,3,2,2.3333333333333335,7,0.0,RM013
+SME0087,Company 87 Ltd,Professional Services,South,50,Lost,391,4,8743.0,1,2,2,1.6666666666666667,2,1.19,RM014
+SME0088,Company 88 Ltd,Professional Services,South,200,Lost,392,1,3942.0,1,1,1,1.0,1,0.86,RM010
+SME0089,Company 89 Ltd,Food & Beverage,East,5,Champions,51,43,2275967.0,5,5,5,5.0,7,0.0,RM006
+SME0090,Company 90 Ltd,Healthcare,South,10,Lost,350,1,2303.0,1,1,1,1.0,1,0.86,RM016
+SME0091,Company 91 Ltd,Retail,West,5,Champions,55,38,2955371.0,4,5,5,4.666666666666667,7,0.0,RM006
+SME0092,Company 92 Ltd,Professional Services,North,50,Champions,19,30,1646204.0,5,4,5,4.666666666666667,7,0.0,RM017
+SME0093,Company 93 Ltd,Construction,West,100,Loyal Customers,122,18,178958.0,3,4,4,3.6666666666666665,6,0.52,RM010
+SME0094,Company 94 Ltd,Professional Services,South,10,At Risk,135,8,81546.0,3,2,3,2.6666666666666665,5,0.76,RM018
+SME0095,Company 95 Ltd,Construction,Central,200,Lost,277,3,4863.0,2,1,1,1.3333333333333333,1,1.14,RM018
+SME0096,Company 96 Ltd,Healthcare,North,5,Champions,56,54,1483839.0,4,5,4,4.333333333333333,7,0.0,RM003
+SME0097,Company 97 Ltd,Healthcare,North,200,Lost,372,3,7441.0,1,1,2,1.3333333333333333,3,0.76,RM020
+SME0098,Company 98 Ltd,Healthcare,East,25,At Risk,139,7,37110.0,3,2,2,2.3333333333333335,5,0.67,RM015
+SME0099,Company 99 Ltd,Retail,East,5,Lost,309,2,2690.0,2,1,1,1.3333333333333333,2,0.95,RM015
+SME0100,Company 100 Ltd,Retail,Central,25,Can't Lose Them,185,14,120761.0,2,3,3,2.6666666666666665,6,0.38,RM004
+SME0101,Company 101 Ltd,Retail,North,10,Champions,56,53,2717315.0,4,5,5,4.666666666666667,7,0.0,RM009
+SME0102,Company 102 Ltd,Professional Services,Central,10,Champions,93,21,671538.0,4,4,4,4.0,6,0.57,RM019
+SME0103,Company 103 Ltd,Manufacturing,East,10,Champions,17,74,30724310.0,5,5,5,5.0,7,0.0,RM017
+SME0104,Company 104 Ltd,Healthcare,East,100,Champions,53,53,2128803.0,4,5,5,4.666666666666667,7,0.0,RM011
+SME0105,Company 105 Ltd,Food & Beverage,North,25,Champions,34,96,28727045.0,5,5,5,5.0,7,0.0,RM009
+SME0106,Company 106 Ltd,Manufacturing,West,10,Lost,203,2,1047.0,2,1,1,1.3333333333333333,2,0.95,RM010
+SME0107,Company 107 Ltd,Healthcare,South,50,Lost,662,3,3803.0,1,1,1,1.0,2,0.71,RM018
+SME0108,Company 108 Ltd,Construction,East,50,Loyal Customers,171,9,98460.0,3,3,3,3.0,6,0.43,RM020
+SME0109,Company 109 Ltd,Manufacturing,East,10,Champions,23,98,31939329.0,5,5,5,5.0,7,0.0,RM013
+SME0110,Company 110 Ltd,Retail,West,25,Hibernating,258,8,89254.0,2,2,3,2.3333333333333335,5,0.67,RM008
+SME0111,Company 111 Ltd,Manufacturing,West,5,Champions,51,59,4388598.0,5,5,5,5.0,7,0.0,RM007
+SME0112,Company 112 Ltd,Retail,Central,10,Lost,450,1,1905.0,1,1,1,1.0,1,0.86,RM017
+SME0113,Company 113 Ltd,Food & Beverage,Central,50,Champions,61,18,255682.0,4,4,4,4.0,6,0.57,RM015
+SME0114,Company 114 Ltd,Construction,South,10,Lost,271,2,5708.0,2,1,2,1.6666666666666667,2,1.19,RM020
+SME0115,Company 115 Ltd,Professional Services,South,25,Loyal Customers,124,12,128972.0,3,3,3,3.0,6,0.43,RM015
+SME0116,Company 116 Ltd,Food & Beverage,North,50,Champions,25,54,3223320.0,5,5,5,5.0,7,0.0,RM001
+SME0117,Company 117 Ltd,Construction,Central,5,Loyal Customers,144,18,219500.0,3,4,4,3.6666666666666665,6,0.52,RM014
+SME0118,Company 118 Ltd,Retail,East,25,Champions,89,38,1753807.0,4,5,5,4.666666666666667,7,0.0,RM005
+SME0119,Company 119 Ltd,Food & Beverage,Central,10,Champions,53,57,2170305.0,4,5,5,4.666666666666667,7,0.0,RM011
+SME0120,Company 120 Ltd,Healthcare,East,200,Champions,26,42,1771490.0,5,5,5,5.0,7,0.0,RM016
+SME0121,Company 121 Ltd,Construction,West,25,Can't Lose Them,239,18,48671.0,2,4,2,2.6666666666666665,7,0.0,RM002
+SME0122,Company 122 Ltd,Food & Beverage,Central,100,Loyal Customers,172,11,103724.0,3,3,3,3.0,4,1.29,RM008
+SME0123,Company 123 Ltd,Manufacturing,West,25,Champions,66,31,2121576.0,4,4,5,4.333333333333333,7,0.0,RM011
+SME0124,Company 124 Ltd,Retail,South,5,Champions,9,107,29079207.0,5,5,5,5.0,7,0.0,RM018
+SME0125,Company 125 Ltd,Manufacturing,South,50,Potential Loyalists,152,12,48976.0,3,3,2,2.6666666666666665,6,0.38,RM003
+SME0126,Company 126 Ltd,Healthcare,North,200,Champions,61,34,2350866.0,4,4,5,4.333333333333333,7,0.0,RM001
+SME0127,Company 127 Ltd,Construction,Central,50,Champions,10,108,40573131.0,5,5,5,5.0,7,0.0,RM011
+SME0128,Company 128 Ltd,Construction,West,100,Lost,452,1,1437.0,1,1,1,1.0,1,0.86,RM016
+SME0129,Company 129 Ltd,Retail,East,100,Champions,65,40,2622336.0,4,5,5,4.666666666666667,6,0.67,RM018
+SME0130,Company 130 Ltd,Healthcare,South,10,Loyal Customers,163,9,94520.0,3,3,3,3.0,6,0.43,RM016
+SME0131,Company 131 Ltd,Healthcare,South,10,Loyal Customers,164,17,176015.0,3,4,4,3.6666666666666665,7,0.0,RM010
+SME0132,Company 132 Ltd,Manufacturing,East,50,Can't Lose Them,206,19,236433.0,2,4,4,3.3333333333333335,7,0.0,RM018
+SME0133,Company 133 Ltd,Retail,West,25,Loyal Customers,88,19,112469.0,4,4,3,3.6666666666666665,5,1.05,RM006
+SME0134,Company 134 Ltd,Manufacturing,West,100,Loyal Customers,169,37,2789627.0,3,4,5,4.0,7,0.0,RM019
+SME0135,Company 135 Ltd,Food & Beverage,Central,100,Lost,465,2,6292.0,1,1,2,1.3333333333333333,1,1.14,RM004
+SME0136,Company 136 Ltd,Manufacturing,Central,25,Lost,338,2,865.0,1,1,1,1.0,2,0.71,RM013
+SME0137,Company 137 Ltd,Healthcare,North,10,Champions,47,59,967587.0,5,5,4,4.666666666666667,7,0.0,RM014
+SME0138,Company 138 Ltd,Professional Services,South,50,Champions,85,53,4221427.0,4,5,5,4.666666666666667,7,0.0,RM003
+SME0139,Company 139 Ltd,Manufacturing,Central,10,Potential Loyalists,84,14,47840.0,4,3,2,3.0,7,0.0,RM010
+SME0140,Company 140 Ltd,Food & Beverage,West,100,At Risk,169,6,80037.0,3,2,3,2.6666666666666665,5,0.76,RM006
+SME0141,Company 141 Ltd,Food & Beverage,East,25,Champions,34,21,1579125.0,5,4,5,4.666666666666667,6,0.67,RM001
+SME0142,Company 142 Ltd,Manufacturing,West,50,Loyal Customers,155,12,69215.0,3,3,3,3.0,6,0.43,RM014
+SME0143,Company 143 Ltd,Healthcare,South,5,Loyal Customers,158,19,176308.0,3,4,4,3.6666666666666665,7,0.0,RM008
+SME0144,Company 144 Ltd,Manufacturing,West,50,Lost,388,4,7427.0,1,2,2,1.6666666666666667,4,0.71,RM019
+SME0145,Company 145 Ltd,Manufacturing,North,25,Lost,215,7,46583.0,2,2,2,2.0,4,0.86,RM014
+SME0146,Company 146 Ltd,Retail,South,25,Champions,13,31,1324792.0,5,4,4,4.333333333333333,7,0.0,RM010
+SME0147,Company 147 Ltd,Professional Services,East,10,Lost,478,3,2712.0,1,1,1,1.0,2,0.71,RM017
+SME0148,Company 148 Ltd,Healthcare,North,50,Lost,274,2,2421.0,2,1,1,1.3333333333333333,2,0.95,RM009
+SME0149,Company 149 Ltd,Retail,South,100,Loyal Customers,119,11,87550.0,3,3,3,3.0,5,0.86,RM006
+SME0150,Company 150 Ltd,Manufacturing,East,10,Champions,29,55,3218596.0,5,5,5,5.0,7,0.0,RM011
+SME0151,Company 151 Ltd,Food & Beverage,North,5,Champions,38,51,1045055.0,5,5,4,4.666666666666667,7,0.0,RM007
+SME0152,Company 152 Ltd,Manufacturing,North,5,Champions,28,57,4423946.0,5,5,5,5.0,7,0.0,RM017
+SME0153,Company 153 Ltd,Retail,South,50,Loyal Customers,139,17,125337.0,3,4,3,3.3333333333333335,7,0.0,RM001
+SME0154,Company 154 Ltd,Healthcare,Central,50,Champions,65,23,1586935.0,4,4,5,4.333333333333333,7,0.0,RM005
+SME0155,Company 155 Ltd,Food & Beverage,North,25,Lost,616,1,1345.0,1,1,1,1.0,1,0.86,RM009
+SME0156,Company 156 Ltd,Manufacturing,North,10,Lost,413,3,4617.0,1,1,1,1.0,3,0.57,RM018
+SME0157,Company 157 Ltd,Professional Services,East,25,Lost,343,3,2473.0,1,1,1,1.0,3,0.57,RM002
+SME0158,Company 158 Ltd,Construction,West,25,Potential Loyalists,140,11,40385.0,3,3,2,2.6666666666666665,6,0.38,RM011
+SME0159,Company 159 Ltd,Manufacturing,South,25,Loyal Customers,126,16,137071.0,3,3,3,3.0,6,0.43,RM006
+SME0160,Company 160 Ltd,Professional Services,South,500,Lost,356,3,6369.0,1,1,2,1.3333333333333333,3,0.76,RM008
+SME0161,Company 161 Ltd,Manufacturing,Central,5,Potential Loyalists,141,13,46219.0,3,3,2,2.6666666666666665,6,0.38,RM004
+SME0162,Company 162 Ltd,Professional Services,Central,50,Lost,369,3,2237.0,1,1,1,1.0,3,0.57,RM018
+SME0163,Company 163 Ltd,Professional Services,South,25,At Risk,169,4,4524.0,3,2,1,2.0,3,1.14,RM011
+SME0164,Company 164 Ltd,Healthcare,Central,25,Can't Lose Them,183,11,128590.0,2,3,3,2.6666666666666665,5,0.76,RM005
+SME0165,Company 165 Ltd,Retail,East,50,Hibernating,224,7,102156.0,2,2,3,2.3333333333333335,6,0.33,RM015
+SME0166,Company 166 Ltd,Construction,South,50,Champions,100,18,269664.0,4,4,4,4.0,7,0.0,RM018
+SME0167,Company 167 Ltd,Manufacturing,Central,500,Loyal Customers,140,14,126147.0,3,3,3,3.0,6,0.43,RM002
+SME0168,Company 168 Ltd,Retail,South,5,Can't Lose Them,237,10,106740.0,2,3,3,2.6666666666666665,6,0.38,RM011
+SME0169,Company 169 Ltd,Retail,West,5,Champions,6,95,24669717.0,5,5,5,5.0,7,0.0,RM013
+SME0170,Company 170 Ltd,Professional Services,North,50,At Risk,152,8,82213.0,3,2,3,2.6666666666666665,5,0.76,RM004
+SME0171,Company 171 Ltd,Professional Services,South,25,Lost,356,5,41045.0,1,2,2,1.6666666666666667,4,0.71,RM007
+SME0172,Company 172 Ltd,Retail,North,10,Champions,51,36,2098645.0,5,4,5,4.666666666666667,7,0.0,RM011
+SME0173,Company 173 Ltd,Healthcare,Central,5,Lost,568,1,1608.0,1,1,1,1.0,1,0.86,RM004
+SME0174,Company 174 Ltd,Manufacturing,North,5,Can't Lose Them,210,12,59714.0,2,3,2,2.3333333333333335,6,0.33,RM015
+SME0175,Company 175 Ltd,Professional Services,South,100,Lost,568,1,1758.0,1,1,1,1.0,1,0.86,RM001
+SME0176,Company 176 Ltd,Retail,West,10,Loyal Customers,152,10,110090.0,3,3,3,3.0,6,0.43,RM003
+SME0177,Company 177 Ltd,Professional Services,Central,10,New Customers,73,6,17717.0,4,2,2,2.6666666666666665,4,1.14,RM014
+SME0178,Company 178 Ltd,Manufacturing,South,10,Lost,249,4,2082.0,2,2,1,1.6666666666666667,3,0.95,RM006
+SME0179,Company 179 Ltd,Food & Beverage,Central,25,Loyal Customers,139,11,152108.0,3,3,4,3.3333333333333335,6,0.48,RM018
+SME0180,Company 180 Ltd,Retail,East,5,Lost,487,2,4105.0,1,1,1,1.0,2,0.71,RM001
+SME0181,Company 181 Ltd,Manufacturing,North,25,Can't Lose Them,228,15,95490.0,2,3,3,2.6666666666666665,7,0.0,RM006
+SME0182,Company 182 Ltd,Retail,East,5,Can't Lose Them,206,13,52376.0,2,3,2,2.3333333333333335,6,0.33,RM006
+SME0183,Company 183 Ltd,Food & Beverage,South,100,Can't Lose Them,228,12,153924.0,2,3,4,3.0,6,0.43,RM016
+SME0184,Company 184 Ltd,Food & Beverage,West,10,Can't Lose Them,185,14,94645.0,2,3,3,2.6666666666666665,6,0.38,RM005
+SME0185,Company 185 Ltd,Manufacturing,Central,25,Lost,200,4,9958.0,2,2,2,2.0,3,1.14,RM017
+SME0186,Company 186 Ltd,Professional Services,North,100,Lost,479,1,538.0,1,1,1,1.0,1,0.86,RM010
+SME0187,Company 187 Ltd,Construction,Central,50,Champions,44,45,3502621.0,5,5,5,5.0,7,0.0,RM018
+SME0188,Company 188 Ltd,Professional Services,South,25,Can't Lose Them,192,11,182018.0,2,3,4,3.0,5,0.86,RM007
+SME0189,Company 189 Ltd,Healthcare,Central,10,Lost,333,4,7976.0,1,2,2,1.6666666666666667,2,1.19,RM003
+SME0190,Company 190 Ltd,Manufacturing,North,10,Lost,599,4,6394.0,1,2,2,1.6666666666666667,4,0.71,RM013
+SME0191,Company 191 Ltd,Retail,South,50,Can't Lose Them,221,15,51328.0,2,3,2,2.3333333333333335,7,0.0,RM015
+SME0192,Company 192 Ltd,Food & Beverage,Central,500,Loyal Customers,127,17,106301.0,3,4,3,3.3333333333333335,7,0.0,RM020
+SME0193,Company 193 Ltd,Food & Beverage,West,50,Champions,83,57,2227049.0,4,5,5,4.666666666666667,7,0.0,RM019
+SME0194,Company 194 Ltd,Professional Services,South,25,Loyal Customers,114,9,109491.0,3,3,3,3.0,5,0.86,RM003
+SME0195,Company 195 Ltd,Manufacturing,South,50,Loyal Customers,168,11,106006.0,3,3,3,3.0,6,0.43,RM004
+SME0196,Company 196 Ltd,Manufacturing,West,25,Champions,85,56,2267351.0,4,5,5,4.666666666666667,7,0.0,RM005
+SME0197,Company 197 Ltd,Professional Services,East,5,Can't Lose Them,205,18,74256.0,2,4,3,3.0,6,0.43,RM001
+SME0198,Company 198 Ltd,Food & Beverage,North,25,Lost,305,4,3449.0,2,2,1,1.6666666666666667,3,0.95,RM004
+SME0199,Company 199 Ltd,Food & Beverage,East,200,Champions,31,45,1973615.0,5,5,5,5.0,7,0.0,RM012
+SME0200,Company 200 Ltd,Construction,Central,10,Can't Lose Them,189,19,179240.0,2,4,4,3.3333333333333335,6,0.48,RM010
+SME0201,Company 201 Ltd,Professional Services,West,50,Champions,74,19,233109.0,4,4,4,4.0,7,0.0,RM020
+SME0202,Company 202 Ltd,Retail,East,10,Loyal Customers,75,19,97955.0,4,4,3,3.6666666666666665,6,0.52,RM013
+SME0203,Company 203 Ltd,Retail,South,25,Loyal Customers,77,15,190431.0,4,3,4,3.6666666666666665,7,0.0,RM014
+SME0204,Company 204 Ltd,Food & Beverage,Central,5,Potential Loyalists,133,12,51750.0,3,3,2,2.6666666666666665,7,0.0,RM005
+SME0205,Company 205 Ltd,Professional Services,Central,25,Lost,335,4,9172.0,1,2,2,1.6666666666666667,3,0.95,RM004
+SME0206,Company 206 Ltd,Retail,East,50,Loyal Customers,138,15,144662.0,3,3,4,3.3333333333333335,7,0.0,RM014
+SME0207,Company 207 Ltd,Retail,East,10,Lost,302,3,2212.0,2,1,1,1.3333333333333333,2,0.95,RM010
+SME0208,Company 208 Ltd,Professional Services,West,50,Lost,377,3,2211.0,1,1,1,1.0,3,0.57,RM017
+SME0209,Company 209 Ltd,Retail,North,50,Champions,63,51,1722962.0,4,5,5,4.666666666666667,7,0.0,RM010
+SME0210,Company 210 Ltd,Retail,East,200,New Customers,35,8,99938.0,5,2,3,3.3333333333333335,4,1.43,RM007
+SME0211,Company 211 Ltd,Healthcare,East,10,Lost,584,3,6193.0,1,1,2,1.3333333333333333,2,0.95,RM016
+SME0212,Company 212 Ltd,Professional Services,South,25,Lost,432,2,3124.0,1,1,1,1.0,1,0.86,RM001
+SME0213,Company 213 Ltd,Professional Services,Central,10,At Risk,163,6,25490.0,3,2,2,2.3333333333333335,4,1.0,RM017
+SME0214,Company 214 Ltd,Manufacturing,North,500,Loyal Customers,62,16,132788.0,4,3,3,3.3333333333333335,6,0.48,RM009
+SME0215,Company 215 Ltd,Professional Services,South,200,Champions,32,47,968388.0,5,5,4,4.666666666666667,7,0.0,RM006
+SME0216,Company 216 Ltd,Manufacturing,West,25,Lost,416,4,10093.0,1,2,2,1.6666666666666667,3,0.95,RM019
+SME0217,Company 217 Ltd,Manufacturing,West,100,Lost,330,2,1762.0,1,1,1,1.0,2,0.71,RM013
+SME0218,Company 218 Ltd,Professional Services,East,25,Champions,54,46,1777308.0,4,5,5,4.666666666666667,7,0.0,RM003
+SME0219,Company 219 Ltd,Professional Services,East,50,Loyal Customers,171,17,120998.0,3,4,3,3.3333333333333335,6,0.48,RM007
+SME0220,Company 220 Ltd,Construction,West,5,Champions,31,51,1507543.0,5,5,4,4.666666666666667,7,0.0,RM009
+SME0221,Company 221 Ltd,Professional Services,East,50,Loyal Customers,130,15,62885.0,3,3,3,3.0,6,0.43,RM005
+SME0222,Company 222 Ltd,Professional Services,North,5,Champions,50,23,967484.0,5,4,4,4.333333333333333,7,0.0,RM010
+SME0223,Company 223 Ltd,Retail,East,100,Loyal Customers,116,16,114579.0,3,3,3,3.0,5,0.86,RM017
+SME0224,Company 224 Ltd,Manufacturing,Central,50,Lost,610,1,572.0,1,1,1,1.0,1,0.86,RM012
+SME0225,Company 225 Ltd,Manufacturing,East,50,Can't Lose Them,202,19,248958.0,2,4,4,3.3333333333333335,7,0.0,RM016
+SME0226,Company 226 Ltd,Manufacturing,South,5,Loyal Customers,159,13,104081.0,3,3,3,3.0,6,0.43,RM003
+SME0227,Company 227 Ltd,Food & Beverage,North,10,Lost,365,3,7382.0,1,1,2,1.3333333333333333,2,0.95,RM009
+SME0228,Company 228 Ltd,Manufacturing,South,10,Champions,66,37,2381731.0,4,4,5,4.333333333333333,7,0.0,RM015
+SME0229,Company 229 Ltd,Food & Beverage,South,25,Loyal Customers,147,17,117202.0,3,4,3,3.3333333333333335,7,0.0,RM005
+SME0230,Company 230 Ltd,Professional Services,Central,5,Champions,56,59,3366255.0,4,5,5,4.666666666666667,7,0.0,RM013
+SME0231,Company 231 Ltd,Construction,North,200,Champions,11,28,1768770.0,5,4,5,4.666666666666667,7,0.0,RM014
+SME0232,Company 232 Ltd,Healthcare,North,25,Lost,224,7,40877.0,2,2,2,2.0,3,1.14,RM020
+SME0233,Company 233 Ltd,Professional Services,North,10,At Risk,121,8,78271.0,3,2,3,2.6666666666666665,5,0.76,RM015
+SME0234,Company 234 Ltd,Healthcare,North,25,Lost,476,1,1732.0,1,1,1,1.0,1,0.86,RM016
+SME0235,Company 235 Ltd,Retail,North,25,Lost,203,6,60257.0,2,2,2,2.0,4,0.86,RM013
+SME0236,Company 236 Ltd,Professional Services,Central,50,Can't Lose Them,197,10,38717.0,2,3,2,2.3333333333333335,7,0.0,RM017
+SME0237,Company 237 Ltd,Manufacturing,East,25,Champions,60,18,187331.0,4,4,4,4.0,7,0.0,RM008
+SME0238,Company 238 Ltd,Retail,South,100,Loyal Customers,102,12,130362.0,4,3,3,3.3333333333333335,6,0.48,RM002
+SME0239,Company 239 Ltd,Professional Services,North,25,Lost,654,1,4319.0,1,1,1,1.0,1,0.86,RM005
+SME0240,Company 240 Ltd,Retail,East,500,Lost,546,2,2336.0,1,1,1,1.0,2,0.71,RM006
+SME0241,Company 241 Ltd,Food & Beverage,East,100,Potential Loyalists,110,12,62205.0,4,3,2,3.0,7,0.0,RM012
+SME0242,Company 242 Ltd,Food & Beverage,South,10,Champions,17,96,41848731.0,5,5,5,5.0,7,0.0,RM018
+SME0243,Company 243 Ltd,Food & Beverage,Central,200,Lost,577,2,5201.0,1,1,2,1.3333333333333333,2,0.95,RM001
+SME0244,Company 244 Ltd,Manufacturing,West,5,Champions,86,43,1425442.0,4,5,4,4.333333333333333,7,0.0,RM017
+SME0245,Company 245 Ltd,Retail,West,100,Champions,19,68,11213656.0,5,5,5,5.0,7,0.0,RM011
+SME0246,Company 246 Ltd,Food & Beverage,East,25,Loyal Customers,144,17,156619.0,3,4,4,3.6666666666666665,7,0.0,RM010
+SME0247,Company 247 Ltd,Healthcare,South,100,Lost,321,1,2641.0,2,1,1,1.3333333333333333,1,1.14,RM019
+SME0248,Company 248 Ltd,Food & Beverage,West,100,Loyal Customers,107,13,186395.0,4,3,4,3.6666666666666665,5,1.05,RM014
+SME0249,Company 249 Ltd,Food & Beverage,East,100,Lost,288,2,4246.0,2,1,1,1.3333333333333333,2,0.95,RM010
+SME0250,Company 250 Ltd,Construction,Central,50,Champions,84,35,1427865.0,4,4,4,4.0,7,0.0,RM015
+SME0251,Company 251 Ltd,Manufacturing,West,10,Lost,390,3,6702.0,1,1,2,1.3333333333333333,3,0.76,RM019
+SME0252,Company 252 Ltd,Manufacturing,East,5,Lost,536,2,5839.0,1,1,2,1.3333333333333333,2,0.95,RM004
+SME0253,Company 253 Ltd,Construction,East,25,At Risk,141,7,79737.0,3,2,3,2.6666666666666665,6,0.38,RM002
+SME0254,Company 254 Ltd,Manufacturing,North,10,At Risk,171,2,5803.0,3,1,2,2.0,1,1.71,RM009
+SME0255,Company 255 Ltd,Retail,Central,50,Lost,188,4,6702.0,2,2,2,2.0,2,1.43,RM010
+SME0256,Company 256 Ltd,Professional Services,North,10,Potential Loyalists,60,14,41887.0,4,3,2,3.0,5,0.86,RM011
+SME0257,Company 257 Ltd,Food & Beverage,South,200,Champions,45,23,864277.0,5,4,4,4.333333333333333,6,0.62,RM014
+SME0258,Company 258 Ltd,Professional Services,North,50,Loyal Customers,137,16,78187.0,3,3,3,3.0,7,0.0,RM007
+SME0259,Company 259 Ltd,Professional Services,North,100,Champions,17,54,1134398.0,5,5,4,4.666666666666667,7,0.0,RM015
+SME0260,Company 260 Ltd,Retail,West,5,Champions,33,48,915203.0,5,5,4,4.666666666666667,7,0.0,RM019
+SME0261,Company 261 Ltd,Professional Services,East,100,Champions,56,43,901576.0,4,5,4,4.333333333333333,7,0.0,RM015
+SME0262,Company 262 Ltd,Food & Beverage,Central,200,Champions,51,37,2067251.0,5,4,5,4.666666666666667,7,0.0,RM008
+SME0263,Company 263 Ltd,Retail,North,25,Lost,240,4,5547.0,2,2,2,2.0,3,1.14,RM011
+SME0264,Company 264 Ltd,Healthcare,Central,50,Lost,635,1,1288.0,1,1,1,1.0,1,0.86,RM009
+SME0265,Company 265 Ltd,Food & Beverage,North,50,Loyal Customers,147,16,153134.0,3,3,4,3.3333333333333335,7,0.0,RM015
+SME0266,Company 266 Ltd,Professional Services,South,10,Loyal Customers,125,16,186908.0,3,3,4,3.3333333333333335,7,0.0,RM001
+SME0267,Company 267 Ltd,Professional Services,North,25,Champions,72,26,1382195.0,4,4,4,4.0,6,0.57,RM001
+SME0268,Company 268 Ltd,Professional Services,West,25,Champions,66,38,2131194.0,4,5,5,4.666666666666667,7,0.0,RM019
+SME0269,Company 269 Ltd,Manufacturing,East,5,Lost,675,2,1011.0,1,1,1,1.0,2,0.71,RM003
+SME0270,Company 270 Ltd,Manufacturing,South,25,Champions,57,33,797712.0,4,4,4,4.0,7,0.0,RM010
+SME0271,Company 271 Ltd,Construction,North,5,Champions,13,38,1125728.0,5,5,4,4.666666666666667,7,0.0,RM008
+SME0272,Company 272 Ltd,Construction,Central,5,Lost,582,3,5366.0,1,1,2,1.3333333333333333,2,0.95,RM015
+SME0273,Company 273 Ltd,Construction,South,5,Champions,71,24,1455930.0,4,4,4,4.0,7,0.0,RM010
+SME0274,Company 274 Ltd,Food & Beverage,South,200,Lost,251,3,7260.0,2,1,2,1.6666666666666667,3,0.95,RM001
+SME0275,Company 275 Ltd,Healthcare,North,25,Lost,375,4,10112.0,1,2,2,1.6666666666666667,4,0.71,RM018
+SME0276,Company 276 Ltd,Healthcare,South,200,Lost,238,1,3034.0,2,1,1,1.3333333333333333,1,1.14,RM002
+SME0277,Company 277 Ltd,Construction,Central,25,Champions,25,28,1923336.0,5,4,5,4.666666666666667,6,0.67,RM019
+SME0278,Company 278 Ltd,Professional Services,South,10,Champions,19,91,25756718.0,5,5,5,5.0,7,0.0,RM013
+SME0279,Company 279 Ltd,Professional Services,Central,25,Lost,275,2,4594.0,2,1,1,1.3333333333333333,2,0.95,RM001
+SME0280,Company 280 Ltd,Construction,North,25,Loyal Customers,173,15,221482.0,3,3,4,3.3333333333333335,6,0.48,RM002
+SME0281,Company 281 Ltd,Food & Beverage,East,5,Champions,30,43,2637186.0,5,5,5,5.0,7,0.0,RM016
+SME0282,Company 282 Ltd,Manufacturing,South,50,Champions,44,29,1407788.0,5,4,4,4.333333333333333,7,0.0,RM015
+SME0283,Company 283 Ltd,Manufacturing,East,10,Lost,370,3,2731.0,1,1,1,1.0,2,0.71,RM013
+SME0284,Company 284 Ltd,Retail,Central,50,Champions,70,16,217334.0,4,4,4,4.0,6,0.57,RM016
+SME0285,Company 285 Ltd,Professional Services,South,50,Lost,212,2,1045.0,2,1,1,1.3333333333333333,2,0.95,RM017
+SME0286,Company 286 Ltd,Retail,West,10,Can't Lose Them,215,17,203350.0,2,4,4,3.3333333333333335,7,0.0,RM007
+SME0287,Company 287 Ltd,Healthcare,East,5,Lost,293,4,5432.0,2,2,2,2.0,3,1.14,RM017
+SME0288,Company 288 Ltd,Healthcare,South,50,Champions,26,48,1276329.0,5,5,4,4.666666666666667,7,0.0,RM007
+SME0289,Company 289 Ltd,Manufacturing,East,25,Lost,201,7,35998.0,2,2,2,2.0,3,1.14,RM013
+SME0290,Company 290 Ltd,Professional Services,South,5,Lost,582,4,4843.0,1,2,1,1.3333333333333333,3,0.76,RM005
+SME0291,Company 291 Ltd,Retail,North,500,Champions,62,52,861758.0,4,5,4,4.333333333333333,7,0.0,RM017
+SME0292,Company 292 Ltd,Retail,East,5,Lost,480,2,1844.0,1,1,1,1.0,2,0.71,RM003
+SME0293,Company 293 Ltd,Construction,West,50,Champions,44,69,34122816.0,5,5,5,5.0,7,0.0,RM007
+SME0294,Company 294 Ltd,Manufacturing,West,500,Lost,569,1,411.0,1,1,1,1.0,1,0.86,RM017
+SME0295,Company 295 Ltd,Retail,Central,10,Lost,214,4,7170.0,2,2,2,2.0,4,0.86,RM007
+SME0296,Company 296 Ltd,Healthcare,South,5,Lost,419,4,4002.0,1,2,1,1.3333333333333333,4,0.57,RM001
+SME0297,Company 297 Ltd,Construction,East,5,Hibernating,308,8,88583.0,2,2,3,2.3333333333333335,4,1.0,RM017
+SME0298,Company 298 Ltd,Retail,Central,10,Lost,345,4,2361.0,1,2,1,1.3333333333333333,3,0.76,RM017
+SME0299,Company 299 Ltd,Professional Services,East,5,Lost,437,1,2113.0,1,1,1,1.0,1,0.86,RM011
+SME0300,Company 300 Ltd,Retail,South,50,At Risk,127,3,3247.0,3,1,1,1.6666666666666667,3,0.95,RM003
+SME0301,Company 301 Ltd,Retail,West,5,Can't Lose Them,201,13,55310.0,2,3,2,2.3333333333333335,7,0.0,RM015
+SME0302,Company 302 Ltd,Healthcare,North,25,Champions,54,52,2913870.0,4,5,5,4.666666666666667,7,0.0,RM011
+SME0303,Company 303 Ltd,Healthcare,West,500,Loyal Customers,171,17,261657.0,3,4,4,3.6666666666666665,7,0.0,RM016
+SME0304,Company 304 Ltd,Professional Services,Central,100,Champions,109,17,185408.0,4,4,4,4.0,7,0.0,RM009
+SME0305,Company 305 Ltd,Professional Services,North,50,Champions,56,43,2613559.0,4,5,5,4.666666666666667,7,0.0,RM001
+SME0306,Company 306 Ltd,Food & Beverage,Central,10,Champions,58,39,1693100.0,4,5,5,4.666666666666667,7,0.0,RM016
+SME0307,Company 307 Ltd,Healthcare,South,50,Lost,498,1,2173.0,1,1,1,1.0,1,0.86,RM009
+SME0308,Company 308 Ltd,Manufacturing,North,25,Loyal Customers,125,18,81893.0,3,4,3,3.3333333333333335,6,0.48,RM019
+SME0309,Company 309 Ltd,Construction,Central,25,Lost,671,1,768.0,1,1,1,1.0,1,0.86,RM012
+SME0310,Company 310 Ltd,Manufacturing,South,5,Lost,405,4,5281.0,1,2,2,1.6666666666666667,3,0.95,RM019
+SME0311,Company 311 Ltd,Healthcare,West,100,Champions,52,29,1943898.0,5,4,5,4.666666666666667,6,0.67,RM009
+SME0312,Company 312 Ltd,Retail,South,25,Champions,51,23,1405550.0,5,4,4,4.333333333333333,7,0.0,RM007
+SME0313,Company 313 Ltd,Retail,East,10,Loyal Customers,168,17,101411.0,3,4,3,3.3333333333333335,6,0.48,RM014
+SME0314,Company 314 Ltd,Food & Beverage,South,25,Loyal Customers,91,15,141442.0,4,3,4,3.6666666666666665,6,0.52,RM019
+SME0315,Company 315 Ltd,Construction,South,25,Champions,42,40,2361085.0,5,5,5,5.0,7,0.0,RM019
+SME0316,Company 316 Ltd,Professional Services,East,100,Can't Lose Them,193,17,265663.0,2,4,4,3.3333333333333335,7,0.0,RM002
+SME0317,Company 317 Ltd,Healthcare,Central,50,Hibernating,230,7,92722.0,2,2,3,2.3333333333333335,4,1.0,RM009
+SME0318,Company 318 Ltd,Retail,Central,50,Champions,5,67,13917695.0,5,5,5,5.0,7,0.0,RM013
+SME0319,Company 319 Ltd,Retail,South,5,At Risk,177,8,41694.0,3,2,2,2.3333333333333335,5,0.67,RM015
+SME0320,Company 320 Ltd,Manufacturing,East,25,Lost,594,1,1853.0,1,1,1,1.0,1,0.86,RM003
+SME0321,Company 321 Ltd,Healthcare,East,25,Champions,30,54,2095627.0,5,5,5,5.0,7,0.0,RM011
+SME0322,Company 322 Ltd,Professional Services,West,5,Lost,244,1,484.0,2,1,1,1.3333333333333333,1,1.14,RM014
+SME0323,Company 323 Ltd,Professional Services,Central,10,New Customers,95,8,103290.0,4,2,3,3.0,5,0.86,RM008
+SME0324,Company 324 Ltd,Manufacturing,North,50,Lost,216,4,4079.0,2,2,1,1.6666666666666667,3,0.95,RM018
+SME0325,Company 325 Ltd,Food & Beverage,Central,5,Champions,63,38,2719918.0,4,5,5,4.666666666666667,6,0.67,RM019
+SME0326,Company 326 Ltd,Professional Services,Central,25,Champions,29,50,1173098.0,5,5,4,4.666666666666667,7,0.0,RM016
+SME0327,Company 327 Ltd,Professional Services,West,10,Lost,503,2,2769.0,1,1,1,1.0,2,0.71,RM002
+SME0328,Company 328 Ltd,Professional Services,North,5,Potential Loyalists,165,10,45449.0,3,3,2,2.6666666666666665,5,0.76,RM008
+SME0329,Company 329 Ltd,Healthcare,West,10,Loyal Customers,124,17,135118.0,3,4,3,3.3333333333333335,6,0.48,RM006
+SME0330,Company 330 Ltd,Manufacturing,North,200,Champions,23,54,3962002.0,5,5,5,5.0,7,0.0,RM012
+SME0331,Company 331 Ltd,Manufacturing,South,100,Champions,13,95,20823452.0,5,5,5,5.0,7,0.0,RM015
+SME0332,Company 332 Ltd,Construction,North,200,Lost,558,2,2885.0,1,1,1,1.0,2,0.71,RM008
+SME0333,Company 333 Ltd,Retail,West,25,Lost,393,2,5547.0,1,1,2,1.3333333333333333,2,0.95,RM004
+SME0334,Company 334 Ltd,Retail,Central,5,Champions,7,74,8170230.0,5,5,5,5.0,7,0.0,RM015
+SME0335,Company 335 Ltd,Retail,North,25,Potential Loyalists,148,13,47232.0,3,3,2,2.6666666666666665,5,0.76,RM020
+SME0336,Company 336 Ltd,Retail,North,25,Lost,445,2,1605.0,1,1,1,1.0,1,0.86,RM017
+SME0337,Company 337 Ltd,Construction,East,100,Lost,246,2,1950.0,2,1,1,1.3333333333333333,1,1.14,RM013
+SME0338,Company 338 Ltd,Professional Services,Central,5,At Risk,174,6,63543.0,3,2,3,2.6666666666666665,4,1.14,RM018
+SME0339,Company 339 Ltd,Healthcare,South,25,Loyal Customers,152,12,77156.0,3,3,3,3.0,6,0.43,RM002
+SME0340,Company 340 Ltd,Retail,West,10,Loyal Customers,95,10,127823.0,4,3,3,3.3333333333333335,6,0.48,RM013
+SME0341,Company 341 Ltd,Healthcare,South,10,Loyal Customers,173,14,179613.0,3,3,4,3.3333333333333335,6,0.48,RM013
+SME0342,Company 342 Ltd,Healthcare,Central,50,Champions,39,30,705934.0,5,4,4,4.333333333333333,7,0.0,RM015
+SME0343,Company 343 Ltd,Retail,North,25,Loyal Customers,152,17,62726.0,3,4,3,3.3333333333333335,6,0.48,RM020
+SME0344,Company 344 Ltd,Healthcare,North,25,Can't Lose Them,186,14,89779.0,2,3,3,2.6666666666666665,5,0.76,RM010
+SME0345,Company 345 Ltd,Manufacturing,Central,25,Champions,111,38,813083.0,4,5,4,4.333333333333333,7,0.0,RM003
+SME0346,Company 346 Ltd,Professional Services,North,25,At Risk,175,3,5525.0,3,1,2,2.0,2,1.43,RM019
+SME0347,Company 347 Ltd,Professional Services,North,50,Champions,71,21,1391239.0,4,4,4,4.0,7,0.0,RM003
+SME0348,Company 348 Ltd,Retail,North,100,Lost,249,1,1421.0,2,1,1,1.3333333333333333,1,1.14,RM014
+SME0349,Company 349 Ltd,Manufacturing,West,200,Champions,79,34,1629270.0,4,4,5,4.333333333333333,7,0.0,RM008
+SME0350,Company 350 Ltd,Professional Services,West,50,Champions,14,29,1215884.0,5,4,4,4.333333333333333,7,0.0,RM004
+SME0351,Company 351 Ltd,Healthcare,East,10,Champions,53,32,1652468.0,4,4,5,4.333333333333333,7,0.0,RM020
+SME0352,Company 352 Ltd,Construction,South,50,Champions,48,25,1056868.0,5,4,4,4.333333333333333,7,0.0,RM011
+SME0353,Company 353 Ltd,Professional Services,Central,25,Lost,343,3,4980.0,1,1,1,1.0,3,0.57,RM011
+SME0354,Company 354 Ltd,Retail,Central,10,Champions,28,71,33603398.0,5,5,5,5.0,7,0.0,RM011
+SME0355,Company 355 Ltd,Retail,Central,100,Champions,15,115,10505526.0,5,5,5,5.0,7,0.0,RM002
+SME0356,Company 356 Ltd,Professional Services,East,5,Can't Lose Them,232,10,113954.0,2,3,3,2.6666666666666665,5,0.76,RM017
+SME0357,Company 357 Ltd,Retail,West,100,Loyal Customers,150,11,63731.0,3,3,3,3.0,6,0.43,RM009
+SME0358,Company 358 Ltd,Professional Services,East,25,Champions,30,23,877495.0,5,4,4,4.333333333333333,7,0.0,RM002
+SME0359,Company 359 Ltd,Food & Beverage,Central,50,Lost,686,2,4499.0,1,1,1,1.0,2,0.71,RM015
+SME0360,Company 360 Ltd,Professional Services,South,50,Loyal Customers,174,19,125276.0,3,4,3,3.3333333333333335,7,0.0,RM016
+SME0361,Company 361 Ltd,Manufacturing,North,100,Lost,324,2,1548.0,1,1,1,1.0,2,0.71,RM004
+SME0362,Company 362 Ltd,Professional Services,West,50,Champions,48,36,1586268.0,5,4,5,4.666666666666667,7,0.0,RM008
+SME0363,Company 363 Ltd,Healthcare,West,50,Loyal Customers,136,10,142168.0,3,3,4,3.3333333333333335,7,0.0,RM009
+SME0364,Company 364 Ltd,Healthcare,East,5,Lost,348,1,3088.0,1,1,1,1.0,1,0.86,RM005
+SME0365,Company 365 Ltd,Food & Beverage,West,25,Lost,462,2,5848.0,1,1,2,1.3333333333333333,1,1.14,RM016
+SME0366,Company 366 Ltd,Manufacturing,Central,10,Lost,342,4,8116.0,1,2,2,1.6666666666666667,3,0.95,RM013
+SME0367,Company 367 Ltd,Food & Beverage,Central,50,Lost,235,7,45698.0,2,2,2,2.0,6,0.29,RM007
+SME0368,Company 368 Ltd,Food & Beverage,East,25,At Risk,169,8,106793.0,3,2,3,2.6666666666666665,4,1.14,RM020
+SME0369,Company 369 Ltd,Retail,Central,50,Loyal Customers,163,14,114398.0,3,3,3,3.0,7,0.0,RM017
+SME0370,Company 370 Ltd,Retail,South,5,Champions,22,38,2058101.0,5,5,5,5.0,7,0.0,RM003
+SME0371,Company 371 Ltd,Retail,East,5,Champions,45,40,1571630.0,5,5,4,4.666666666666667,7,0.0,RM005
+SME0372,Company 372 Ltd,Retail,South,50,Lost,454,1,4161.0,1,1,1,1.0,1,0.86,RM019
+SME0373,Company 373 Ltd,Retail,North,5,Loyal Customers,163,19,176087.0,3,4,4,3.6666666666666665,6,0.52,RM012
+SME0374,Company 374 Ltd,Professional Services,South,5,At Risk,129,7,27380.0,3,2,2,2.3333333333333335,4,1.0,RM007
+SME0375,Company 375 Ltd,Retail,North,5,Champions,31,44,2144469.0,5,5,5,5.0,7,0.0,RM009
+SME0376,Company 376 Ltd,Manufacturing,North,200,Champions,49,21,850724.0,5,4,4,4.333333333333333,7,0.0,RM006
+SME0377,Company 377 Ltd,Construction,South,50,Champions,49,55,866377.0,5,5,4,4.666666666666667,7,0.0,RM017
+SME0378,Company 378 Ltd,Retail,East,25,Champions,25,30,1614787.0,5,4,5,4.666666666666667,7,0.0,RM016
+SME0379,Company 379 Ltd,Construction,Central,10,Loyal Customers,72,10,108730.0,4,3,3,3.3333333333333335,5,0.95,RM003
+SME0380,Company 380 Ltd,Manufacturing,Central,10,Champions,10,114,18087004.0,5,5,5,5.0,7,0.0,RM004
+SME0381,Company 381 Ltd,Retail,North,50,Lost,319,1,892.0,2,1,1,1.3333333333333333,1,1.14,RM010
+SME0382,Company 382 Ltd,Professional Services,North,50,Lost,501,1,2017.0,1,1,1,1.0,1,0.86,RM005
+SME0383,Company 383 Ltd,Professional Services,East,10,Lost,536,2,4905.0,1,1,1,1.0,2,0.71,RM010
+SME0384,Company 384 Ltd,Food & Beverage,West,10,New Customers,99,6,40970.0,4,2,2,2.6666666666666665,3,1.52,RM012
+SME0385,Company 385 Ltd,Professional Services,South,5,Champions,53,19,178072.0,4,4,4,4.0,6,0.57,RM010
+SME0386,Company 386 Ltd,Construction,North,50,Champions,38,32,1377990.0,5,4,4,4.333333333333333,7,0.0,RM013
+SME0387,Company 387 Ltd,Manufacturing,Central,50,Loyal Customers,180,14,114959.0,3,3,3,3.0,7,0.0,RM011
+SME0388,Company 388 Ltd,Retail,East,10,Hibernating,265,7,96804.0,2,2,3,2.3333333333333335,5,0.67,RM016
+SME0389,Company 389 Ltd,Construction,South,5,Lost,475,1,2942.0,1,1,1,1.0,1,0.86,RM008
+SME0390,Company 390 Ltd,Construction,East,5,Lost,335,2,1380.0,1,1,1,1.0,2,0.71,RM008
+SME0391,Company 391 Ltd,Food & Beverage,South,200,Champions,25,23,1402480.0,5,4,4,4.333333333333333,6,0.62,RM008
+SME0392,Company 392 Ltd,Healthcare,South,10,Lost,359,4,12927.0,1,2,2,1.6666666666666667,3,0.95,RM013
+SME0393,Company 393 Ltd,Manufacturing,North,50,Lost,283,5,18844.0,2,2,2,2.0,4,0.86,RM002
+SME0394,Company 394 Ltd,Construction,East,50,Champions,46,58,3084017.0,5,5,5,5.0,7,0.0,RM012
+SME0395,Company 395 Ltd,Manufacturing,East,25,Champions,44,54,3687311.0,5,5,5,5.0,7,0.0,RM010
+SME0396,Company 396 Ltd,Food & Beverage,Central,10,Lost,320,3,4167.0,2,1,1,1.3333333333333333,3,0.76,RM012
+SME0397,Company 397 Ltd,Construction,Central,5,Lost,388,4,6330.0,1,2,2,1.6666666666666667,4,0.71,RM011
+SME0398,Company 398 Ltd,Healthcare,North,50,Potential Loyalists,144,11,37713.0,3,3,2,2.6666666666666665,5,0.76,RM015
+SME0399,Company 399 Ltd,Construction,North,50,Champions,53,53,3180088.0,4,5,5,4.666666666666667,7,0.0,RM016
+SME0400,Company 400 Ltd,Construction,West,50,Champions,71,34,775897.0,4,4,4,4.0,7,0.0,RM017
+SME0401,Company 401 Ltd,Retail,Central,25,Champions,27,31,1141497.0,5,4,4,4.333333333333333,6,0.62,RM002
+SME0402,Company 402 Ltd,Food & Beverage,South,5,Champions,77,32,1132541.0,4,4,4,4.0,7,0.0,RM018
+SME0403,Company 403 Ltd,Healthcare,East,200,Champions,34,54,1454960.0,5,5,4,4.666666666666667,7,0.0,RM012
+SME0404,Company 404 Ltd,Construction,North,50,Lost,703,1,2406.0,1,1,1,1.0,1,0.86,RM019
+SME0405,Company 405 Ltd,Manufacturing,East,10,Champions,57,44,2228119.0,4,5,5,4.666666666666667,7,0.0,RM018
+SME0406,Company 406 Ltd,Food & Beverage,East,200,Champions,49,45,3743616.0,5,5,5,5.0,7,0.0,RM017
+SME0407,Company 407 Ltd,Manufacturing,West,50,Lost,650,2,2854.0,1,1,1,1.0,2,0.71,RM006
+SME0408,Company 408 Ltd,Retail,Central,25,Lost,435,3,2359.0,1,1,1,1.0,3,0.57,RM015
+SME0409,Company 409 Ltd,Food & Beverage,North,50,Can't Lose Them,225,19,229715.0,2,4,4,3.3333333333333335,7,0.0,RM003
+SME0410,Company 410 Ltd,Retail,East,100,Can't Lose Them,201,10,64212.0,2,3,3,2.6666666666666665,6,0.38,RM006
+SME0411,Company 411 Ltd,Manufacturing,North,50,New Customers,112,8,58263.0,4,2,2,2.6666666666666665,5,0.76,RM003
+SME0412,Company 412 Ltd,Food & Beverage,South,5,Champions,74,42,1265666.0,4,5,4,4.333333333333333,7,0.0,RM001
+SME0413,Company 413 Ltd,Food & Beverage,West,10,Loyal Customers,114,11,70011.0,3,3,3,3.0,5,0.86,RM013
+SME0414,Company 414 Ltd,Professional Services,South,200,Champions,27,37,2315696.0,5,5,5,5.0,7,0.0,RM014
+SME0415,Company 415 Ltd,Professional Services,North,10,Lost,275,3,3668.0,2,1,1,1.3333333333333333,3,0.76,RM013
+SME0416,Company 416 Ltd,Healthcare,North,25,Lost,237,2,1987.0,2,1,1,1.3333333333333333,2,0.95,RM004
+SME0417,Company 417 Ltd,Manufacturing,Central,25,Champions,46,51,3505157.0,5,5,5,5.0,7,0.0,RM007
+SME0418,Company 418 Ltd,Manufacturing,East,25,Lost,362,1,1171.0,1,1,1,1.0,1,0.86,RM010
+SME0419,Company 419 Ltd,Professional Services,East,50,Lost,464,3,4078.0,1,1,1,1.0,3,0.57,RM007
+SME0420,Company 420 Ltd,Construction,South,200,Lost,349,2,4481.0,1,1,1,1.0,1,0.86,RM015
+SME0421,Company 421 Ltd,Construction,West,10,Lost,256,4,9383.0,2,2,2,2.0,3,1.14,RM015
+SME0422,Company 422 Ltd,Construction,East,5,Champions,40,46,2706081.0,5,5,5,5.0,7,0.0,RM004
+SME0423,Company 423 Ltd,Retail,Central,10,Lost,604,1,1075.0,1,1,1,1.0,1,0.86,RM006
+SME0424,Company 424 Ltd,Healthcare,South,100,Champions,18,52,2428193.0,5,5,5,5.0,7,0.0,RM020
+SME0425,Company 425 Ltd,Retail,South,50,Lost,238,7,44473.0,2,2,2,2.0,4,0.86,RM005
+SME0426,Company 426 Ltd,Healthcare,Central,10,Loyal Customers,118,15,190012.0,3,3,4,3.3333333333333335,6,0.48,RM020
+SME0427,Company 427 Ltd,Healthcare,West,100,Lost,185,5,39942.0,2,2,2,2.0,4,0.86,RM012
+SME0428,Company 428 Ltd,Food & Beverage,Central,100,New Customers,87,7,68848.0,4,2,3,3.0,6,0.43,RM001
+SME0429,Company 429 Ltd,Manufacturing,West,100,Lost,302,2,2924.0,2,1,1,1.3333333333333333,2,0.95,RM008
+SME0430,Company 430 Ltd,Retail,Central,100,Loyal Customers,89,9,133873.0,4,3,3,3.3333333333333335,5,0.95,RM001
+SME0431,Company 431 Ltd,Retail,Central,10,Lost,210,4,6578.0,2,2,2,2.0,3,1.14,RM005
+SME0432,Company 432 Ltd,Construction,North,50,New Customers,94,8,34236.0,4,2,2,2.6666666666666665,5,0.76,RM006
+SME0433,Company 433 Ltd,Professional Services,South,25,Lost,265,4,4747.0,2,2,1,1.6666666666666667,2,1.19,RM003
+SME0434,Company 434 Ltd,Retail,Central,100,Champions,43,31,2199379.0,5,4,5,4.666666666666667,7,0.0,RM015
+SME0435,Company 435 Ltd,Retail,Central,50,Loyal Customers,76,14,113277.0,4,3,3,3.3333333333333335,7,0.0,RM005
+SME0436,Company 436 Ltd,Professional Services,East,50,Lost,433,2,2261.0,1,1,1,1.0,2,0.71,RM014
+SME0437,Company 437 Ltd,Retail,South,50,Loyal Customers,111,9,102802.0,4,3,3,3.3333333333333335,5,0.95,RM018
+SME0438,Company 438 Ltd,Construction,East,10,Lost,586,2,3194.0,1,1,1,1.0,1,0.86,RM016
+SME0439,Company 439 Ltd,Professional Services,South,25,Champions,31,59,4548351.0,5,5,5,5.0,7,0.0,RM006
+SME0440,Company 440 Ltd,Retail,East,500,Champions,87,25,960726.0,4,4,4,4.0,7,0.0,RM014
+SME0441,Company 441 Ltd,Retail,Central,200,New Customers,70,5,22049.0,4,2,2,2.6666666666666665,3,1.52,RM008
+SME0442,Company 442 Ltd,Food & Beverage,Central,5,Can't Lose Them,222,14,66472.0,2,3,3,2.6666666666666665,7,0.0,RM007
+SME0443,Company 443 Ltd,Manufacturing,North,10,Lost,214,5,60410.0,2,2,2,2.0,3,1.14,RM008
+SME0444,Company 444 Ltd,Manufacturing,East,5,Lost,369,3,3854.0,1,1,1,1.0,2,0.71,RM013
+SME0445,Company 445 Ltd,Construction,West,50,New Customers,52,6,28280.0,5,2,2,3.0,3,1.71,RM006
+SME0446,Company 446 Ltd,Food & Beverage,North,100,Lost,255,7,45758.0,2,2,2,2.0,4,0.86,RM018
+SME0447,Company 447 Ltd,Food & Beverage,East,10,Lost,401,4,2487.0,1,2,1,1.3333333333333333,3,0.76,RM002
+SME0448,Company 448 Ltd,Construction,East,25,Lost,567,1,1020.0,1,1,1,1.0,1,0.86,RM008
+SME0449,Company 449 Ltd,Manufacturing,North,100,Loyal Customers,102,14,109077.0,4,3,3,3.3333333333333335,7,0.0,RM011
+SME0450,Company 450 Ltd,Retail,Central,50,Champions,54,38,2897551.0,4,5,5,4.666666666666667,7,0.0,RM001
+SME0451,Company 451 Ltd,Construction,East,25,Hibernating,290,8,110793.0,2,2,3,2.3333333333333335,3,1.33,RM006
+SME0452,Company 452 Ltd,Professional Services,Central,25,Lost,327,3,5335.0,1,1,2,1.3333333333333333,2,0.95,RM016
+SME0453,Company 453 Ltd,Healthcare,North,25,Potential Loyalists,137,10,35600.0,3,3,2,2.6666666666666665,5,0.76,RM020
+SME0454,Company 454 Ltd,Food & Beverage,Central,10,Champions,54,58,2276175.0,4,5,5,4.666666666666667,7,0.0,RM012
+SME0455,Company 455 Ltd,Retail,South,25,Champions,59,39,1099513.0,4,5,4,4.333333333333333,7,0.0,RM011
+SME0456,Company 456 Ltd,Healthcare,West,50,Champions,91,57,1368737.0,4,5,4,4.333333333333333,7,0.0,RM010
+SME0457,Company 457 Ltd,Retail,East,100,Lost,318,5,20915.0,2,2,2,2.0,5,0.57,RM003
+SME0458,Company 458 Ltd,Healthcare,West,50,At Risk,173,8,90293.0,3,2,3,2.6666666666666665,6,0.38,RM013
+SME0459,Company 459 Ltd,Retail,Central,50,Champions,81,19,192731.0,4,4,4,4.0,6,0.57,RM003
+SME0460,Company 460 Ltd,Retail,East,10,Loyal Customers,144,10,133485.0,3,3,3,3.0,5,0.86,RM015
+SME0461,Company 461 Ltd,Retail,Central,25,Champions,12,97,41602938.0,5,5,5,5.0,7,0.0,RM016
+SME0462,Company 462 Ltd,Professional Services,South,5,Champions,15,98,11213553.0,5,5,5,5.0,7,0.0,RM013
+SME0463,Company 463 Ltd,Professional Services,North,10,Can't Lose Them,218,18,136283.0,2,4,3,3.0,6,0.43,RM017
+SME0464,Company 464 Ltd,Professional Services,East,50,Lost,511,4,4913.0,1,2,1,1.3333333333333333,3,0.76,RM003
+SME0465,Company 465 Ltd,Food & Beverage,South,500,Lost,561,1,1020.0,1,1,1,1.0,1,0.86,RM020
+SME0466,Company 466 Ltd,Manufacturing,South,5,Lost,514,2,1510.0,1,1,1,1.0,2,0.71,RM011
+SME0467,Company 467 Ltd,Manufacturing,East,25,Champions,80,19,139758.0,4,4,4,4.0,6,0.57,RM019
+SME0468,Company 468 Ltd,Construction,Central,100,Champions,46,40,1741483.0,5,5,5,5.0,7,0.0,RM011
+SME0469,Company 469 Ltd,Manufacturing,South,10,Lost,289,3,7475.0,2,1,2,1.6666666666666667,2,1.19,RM016
+SME0470,Company 470 Ltd,Food & Beverage,West,25,At Risk,146,6,81007.0,3,2,3,2.6666666666666665,4,1.14,RM003
+SME0471,Company 471 Ltd,Retail,South,50,Lost,299,3,8077.0,2,2,2,2.0,2,1.43,RM006
+SME0472,Company 472 Ltd,Food & Beverage,Central,50,Champions,21,59,2779128.0,5,5,5,5.0,7,0.0,RM014
+SME0473,Company 473 Ltd,Retail,Central,10,Champions,21,94,44880292.0,5,5,5,5.0,7,0.0,RM018
+SME0474,Company 474 Ltd,Food & Beverage,West,25,Champions,13,115,30526373.0,5,5,5,5.0,7,0.0,RM017
+SME0475,Company 475 Ltd,Healthcare,South,50,At Risk,170,3,7215.0,3,2,2,2.3333333333333335,2,1.67,RM004
+SME0476,Company 476 Ltd,Food & Beverage,Central,25,Lost,324,4,2444.0,1,2,1,1.3333333333333333,2,0.95,RM015
+SME0477,Company 477 Ltd,Retail,East,5,Lost,196,5,62631.0,2,2,2,2.0,3,1.14,RM011
+SME0478,Company 478 Ltd,Professional Services,North,50,Lost,223,6,27912.0,2,2,2,2.0,3,1.14,RM003
+SME0479,Company 479 Ltd,Food & Beverage,North,5,Lost,524,3,3512.0,1,2,1,1.3333333333333333,3,0.76,RM003
+SME0480,Company 480 Ltd,Healthcare,North,50,Champions,43,44,3210862.0,5,5,5,5.0,7,0.0,RM016
+SME0481,Company 481 Ltd,Professional Services,South,10,At Risk,167,5,65319.0,3,2,3,2.6666666666666665,4,1.14,RM005
+SME0482,Company 482 Ltd,Professional Services,West,200,Loyal Customers,165,20,1028751.0,3,4,4,3.6666666666666665,7,0.0,RM010
+SME0483,Company 483 Ltd,Healthcare,Central,25,Lost,400,4,13003.0,1,2,2,1.6666666666666667,2,1.19,RM019
+SME0484,Company 484 Ltd,Professional Services,East,10,Loyal Customers,54,16,78817.0,4,4,3,3.6666666666666665,6,0.52,RM004
+SME0485,Company 485 Ltd,Professional Services,East,5,Lost,405,1,3081.0,1,1,1,1.0,1,0.86,RM019
+SME0486,Company 486 Ltd,Food & Beverage,South,10,Lost,367,4,9346.0,1,2,2,1.6666666666666667,3,0.95,RM011
+SME0487,Company 487 Ltd,Retail,North,100,Loyal Customers,161,13,100400.0,3,3,3,3.0,6,0.43,RM002
+SME0488,Company 488 Ltd,Manufacturing,South,500,Champions,77,45,2205186.0,4,5,5,4.666666666666667,7,0.0,RM010
+SME0489,Company 489 Ltd,Food & Beverage,West,25,Lost,528,2,1950.0,1,1,1,1.0,2,0.71,RM011
+SME0490,Company 490 Ltd,Food & Beverage,West,25,Lost,666,1,2571.0,1,1,1,1.0,1,0.86,RM020
+SME0491,Company 491 Ltd,Healthcare,Central,50,Lost,427,4,12387.0,1,2,2,1.6666666666666667,4,0.71,RM016
+SME0492,Company 492 Ltd,Professional Services,Central,100,Loyal Customers,94,15,155627.0,4,3,4,3.6666666666666665,6,0.52,RM019
+SME0493,Company 493 Ltd,Manufacturing,West,25,Can't Lose Them,184,13,44542.0,2,3,2,2.3333333333333335,7,0.0,RM011
+SME0494,Company 494 Ltd,Retail,West,25,Loyal Customers,106,11,141448.0,4,3,4,3.6666666666666665,5,1.05,RM014
+SME0495,Company 495 Ltd,Healthcare,West,25,Champions,16,52,3925628.0,5,5,5,5.0,7,0.0,RM002
+SME0496,Company 496 Ltd,Manufacturing,South,50,Can't Lose Them,200,17,116981.0,2,4,3,3.0,7,0.0,RM005
+SME0497,Company 497 Ltd,Professional Services,West,5,Can't Lose Them,361,10,137435.0,1,3,3,2.3333333333333335,7,0.0,RM005
+SME0498,Company 498 Ltd,Retail,East,50,Loyal Customers,130,10,151129.0,3,3,4,3.3333333333333335,6,0.48,RM019
+SME0499,Company 499 Ltd,Food & Beverage,North,25,Lost,681,1,2171.0,1,1,1,1.0,1,0.86,RM012
+SME0500,Company 500 Ltd,Food & Beverage,West,50,Lost,356,4,9423.0,1,2,2,1.6666666666666667,3,0.95,RM018
+SME0501,Company 501 Ltd,Professional Services,North,5,Champions,49,21,1039365.0,5,4,4,4.333333333333333,7,0.0,RM004
+SME0502,Company 502 Ltd,Healthcare,South,25,Loyal Customers,166,10,86319.0,3,3,3,3.0,5,0.86,RM017
+SME0503,Company 503 Ltd,Manufacturing,North,25,Lost,278,5,25541.0,2,2,2,2.0,4,0.86,RM010
+SME0504,Company 504 Ltd,Construction,South,50,Lost,461,3,3815.0,1,2,1,1.3333333333333333,2,0.95,RM020
+SME0505,Company 505 Ltd,Professional Services,East,5,Loyal Customers,156,14,101632.0,3,3,3,3.0,5,0.86,RM006
+SME0506,Company 506 Ltd,Retail,South,25,Champions,42,41,2880669.0,5,5,5,5.0,7,0.0,RM014
+SME0507,Company 507 Ltd,Food & Beverage,South,25,At Risk,122,5,77661.0,3,2,3,2.6666666666666665,4,1.14,RM011
+SME0508,Company 508 Ltd,Construction,Central,25,Champions,49,56,3815197.0,5,5,5,5.0,7,0.0,RM011
+SME0509,Company 509 Ltd,Food & Beverage,West,50,Can't Lose Them,307,10,69407.0,2,3,3,2.6666666666666665,6,0.38,RM018
+SME0510,Company 510 Ltd,Professional Services,West,50,At Risk,172,5,15497.0,3,2,2,2.3333333333333335,4,1.0,RM018
+SME0511,Company 511 Ltd,Professional Services,East,100,Champions,53,54,2395361.0,4,5,5,4.666666666666667,7,0.0,RM011
+SME0512,Company 512 Ltd,Healthcare,East,10,Loyal Customers,96,17,69793.0,4,4,3,3.6666666666666665,5,1.05,RM012
+SME0513,Company 513 Ltd,Food & Beverage,West,100,Loyal Customers,164,19,137984.0,3,4,4,3.6666666666666665,7,0.0,RM005
+SME0514,Company 514 Ltd,Construction,Central,25,At Risk,166,3,7780.0,3,2,2,2.3333333333333335,3,1.33,RM009
+SME0515,Company 515 Ltd,Retail,West,5,Champions,21,92,27719407.0,5,5,5,5.0,7,0.0,RM009
+SME0516,Company 516 Ltd,Retail,Central,5,At Risk,145,7,80088.0,3,2,3,2.6666666666666665,4,1.14,RM010
+SME0517,Company 517 Ltd,Manufacturing,East,10,Loyal Customers,172,16,134062.0,3,4,3,3.3333333333333335,7,0.0,RM019
+SME0518,Company 518 Ltd,Construction,North,50,Can't Lose Them,200,14,156007.0,2,3,4,3.0,7,0.0,RM001
+SME0519,Company 519 Ltd,Food & Beverage,East,50,Loyal Customers,72,13,168238.0,4,3,4,3.6666666666666665,7,0.0,RM007
+SME0520,Company 520 Ltd,Retail,East,50,At Risk,171,7,75490.0,3,2,3,2.6666666666666665,4,1.14,RM004
+SME0521,Company 521 Ltd,Professional Services,South,25,Loyal Customers,106,15,131562.0,4,3,3,3.3333333333333335,7,0.0,RM001
+SME0522,Company 522 Ltd,Manufacturing,South,25,Lost,342,3,3642.0,1,2,1,1.3333333333333333,3,0.76,RM015
+SME0523,Company 523 Ltd,Food & Beverage,South,5,Loyal Customers,179,13,111064.0,3,3,3,3.0,6,0.43,RM008
+SME0524,Company 524 Ltd,Construction,South,10,Loyal Customers,98,11,160672.0,4,3,4,3.6666666666666665,6,0.52,RM012
+SME0525,Company 525 Ltd,Construction,Central,25,Champions,66,32,1784541.0,4,4,5,4.333333333333333,7,0.0,RM018
+SME0526,Company 526 Ltd,Healthcare,West,5,Lost,293,3,2334.0,2,2,1,1.6666666666666667,3,0.95,RM015
+SME0527,Company 527 Ltd,Healthcare,North,10,Can't Lose Them,230,11,156265.0,2,3,4,3.0,6,0.43,RM017
+SME0528,Company 528 Ltd,Manufacturing,East,25,Lost,210,4,10119.0,2,2,2,2.0,3,1.14,RM014
+SME0529,Company 529 Ltd,Retail,Central,50,Champions,62,33,929334.0,4,4,4,4.0,7,0.0,RM014
+SME0530,Company 530 Ltd,Construction,North,500,Champions,77,40,1299568.0,4,5,4,4.333333333333333,7,0.0,RM018
+SME0531,Company 531 Ltd,Construction,Central,200,At Risk,131,5,50720.0,3,2,2,2.3333333333333335,4,1.0,RM020
+SME0532,Company 532 Ltd,Food & Beverage,Central,50,Loyal Customers,138,15,116967.0,3,3,3,3.0,6,0.43,RM018
+SME0533,Company 533 Ltd,Food & Beverage,East,25,Lost,327,2,3608.0,1,1,1,1.0,1,0.86,RM016
+SME0534,Company 534 Ltd,Professional Services,West,50,Champions,23,41,2809402.0,5,5,5,5.0,7,0.0,RM001
+SME0535,Company 535 Ltd,Construction,South,50,Lost,366,1,859.0,1,1,1,1.0,1,0.86,RM011
+SME0536,Company 536 Ltd,Food & Beverage,West,5,Loyal Customers,113,10,115022.0,4,3,3,3.3333333333333335,4,1.43,RM015
+SME0537,Company 537 Ltd,Construction,East,25,Loyal Customers,176,17,188995.0,3,4,4,3.6666666666666665,6,0.52,RM012
+SME0538,Company 538 Ltd,Manufacturing,East,100,Lost,480,1,796.0,1,1,1,1.0,1,0.86,RM008
+SME0539,Company 539 Ltd,Healthcare,East,25,Lost,278,1,1901.0,2,1,1,1.3333333333333333,1,1.14,RM020
+SME0540,Company 540 Ltd,Retail,North,25,Can't Lose Them,263,11,46158.0,2,3,2,2.3333333333333335,7,0.0,RM006
+SME0541,Company 541 Ltd,Food & Beverage,West,25,Loyal Customers,74,14,235124.0,4,3,4,3.6666666666666665,7,0.0,RM003
+SME0542,Company 542 Ltd,Professional Services,West,10,At Risk,175,7,79346.0,3,2,3,2.6666666666666665,4,1.14,RM013
+SME0543,Company 543 Ltd,Manufacturing,Central,25,Loyal Customers,169,18,117626.0,3,4,3,3.3333333333333335,6,0.48,RM013
+SME0544,Company 544 Ltd,Professional Services,Central,10,Champions,31,44,3324713.0,5,5,5,5.0,7,0.0,RM002
+SME0545,Company 545 Ltd,Professional Services,Central,5,Loyal Customers,167,18,223604.0,3,4,4,3.6666666666666665,7,0.0,RM005
+SME0546,Company 546 Ltd,Manufacturing,East,5,Lost,456,2,3566.0,1,1,1,1.0,2,0.71,RM017
+SME0547,Company 547 Ltd,Retail,West,100,Lost,378,2,2027.0,1,1,1,1.0,2,0.71,RM006
+SME0548,Company 548 Ltd,Professional Services,East,10,Loyal Customers,175,11,141434.0,3,3,4,3.3333333333333335,5,0.95,RM002
+SME0549,Company 549 Ltd,Healthcare,North,25,Lost,328,2,4176.0,1,1,1,1.0,1,0.86,RM004
+SME0550,Company 550 Ltd,Construction,Central,10,Lost,509,1,2135.0,1,1,1,1.0,1,0.86,RM011
+SME0551,Company 551 Ltd,Healthcare,East,200,Champions,86,31,1098260.0,4,4,4,4.0,7,0.0,RM008
+SME0552,Company 552 Ltd,Construction,East,10,Champions,72,23,392146.0,4,4,4,4.0,6,0.57,RM012
+SME0553,Company 553 Ltd,Professional Services,North,25,Champions,20,99,41942500.0,5,5,5,5.0,7,0.0,RM008
+SME0554,Company 554 Ltd,Professional Services,South,100,Can't Lose Them,322,11,58748.0,2,3,2,2.3333333333333335,6,0.33,RM011
+SME0555,Company 555 Ltd,Food & Beverage,West,100,Champions,20,48,1803057.0,5,5,5,5.0,7,0.0,RM020
+SME0556,Company 556 Ltd,Healthcare,South,10,Champions,41,36,1054623.0,5,4,4,4.333333333333333,7,0.0,RM008
+SME0557,Company 557 Ltd,Retail,Central,100,Loyal Customers,161,14,117934.0,3,3,3,3.0,7,0.0,RM008
+SME0558,Company 558 Ltd,Retail,East,25,Champions,85,46,1738320.0,4,5,5,4.666666666666667,7,0.0,RM017
+SME0559,Company 559 Ltd,Construction,North,25,Champions,52,24,1189886.0,5,4,4,4.333333333333333,7,0.0,RM020
+SME0560,Company 560 Ltd,Professional Services,North,5,Can't Lose Them,190,19,81249.0,2,4,3,3.0,7,0.0,RM020
+SME0561,Company 561 Ltd,Professional Services,West,5,Can't Lose Them,203,9,132267.0,2,3,3,2.6666666666666665,4,1.14,RM016
+SME0562,Company 562 Ltd,Retail,South,50,Lost,241,5,38769.0,2,2,2,2.0,4,0.86,RM014
+SME0563,Company 563 Ltd,Retail,West,25,Lost,264,2,6208.0,2,1,2,1.6666666666666667,2,1.19,RM011
+SME0564,Company 564 Ltd,Retail,East,25,Can't Lose Them,286,14,184248.0,2,3,4,3.0,6,0.43,RM007
+SME0565,Company 565 Ltd,Manufacturing,West,50,Champions,12,76,17868705.0,5,5,5,5.0,7,0.0,RM016
+SME0566,Company 566 Ltd,Professional Services,North,50,Champions,46,48,2995484.0,5,5,5,5.0,7,0.0,RM013
+SME0567,Company 567 Ltd,Manufacturing,North,10,Loyal Customers,129,16,210009.0,3,4,4,3.6666666666666665,7,0.0,RM015
+SME0568,Company 568 Ltd,Healthcare,Central,50,Champions,70,23,1331280.0,4,4,4,4.0,7,0.0,RM016
+SME0569,Company 569 Ltd,Food & Beverage,Central,5,Lost,302,4,9922.0,2,2,2,2.0,4,0.86,RM009
+SME0570,Company 570 Ltd,Manufacturing,East,50,Lost,354,5,42956.0,1,2,2,1.6666666666666667,4,0.71,RM003
+SME0571,Company 571 Ltd,Healthcare,South,50,Hibernating,290,7,71674.0,2,2,3,2.3333333333333335,5,0.67,RM019
+SME0572,Company 572 Ltd,Construction,West,200,Lost,340,4,3622.0,1,2,1,1.3333333333333333,3,0.76,RM020
+SME0573,Company 573 Ltd,Manufacturing,East,5,Loyal Customers,73,16,135945.0,4,4,3,3.6666666666666665,6,0.52,RM005
+SME0574,Company 574 Ltd,Professional Services,Central,5,Champions,44,38,2091800.0,5,5,5,5.0,7,0.0,RM010
+SME0575,Company 575 Ltd,Construction,West,10,New Customers,113,7,99603.0,4,2,3,3.0,5,0.86,RM017
+SME0576,Company 576 Ltd,Food & Beverage,Central,10,Champions,46,36,2625445.0,5,4,5,4.666666666666667,7,0.0,RM015
+SME0577,Company 577 Ltd,Retail,West,10,Loyal Customers,164,18,120517.0,3,4,3,3.3333333333333335,7,0.0,RM008
+SME0578,Company 578 Ltd,Food & Beverage,South,100,Champions,62,46,2856429.0,4,5,5,4.666666666666667,7,0.0,RM015
+SME0579,Company 579 Ltd,Healthcare,East,10,Lost,257,3,1796.0,2,2,1,1.6666666666666667,3,0.95,RM014
+SME0580,Company 580 Ltd,Manufacturing,West,10,Champions,50,50,3923074.0,5,5,5,5.0,7,0.0,RM020
+SME0581,Company 581 Ltd,Healthcare,North,50,Loyal Customers,150,11,162038.0,3,3,4,3.3333333333333335,6,0.48,RM007
+SME0582,Company 582 Ltd,Food & Beverage,North,25,Champions,9,102,12924909.0,5,5,5,5.0,7,0.0,RM012
+SME0583,Company 583 Ltd,Healthcare,West,50,Champions,108,19,207525.0,4,4,4,4.0,7,0.0,RM017
+SME0584,Company 584 Ltd,Manufacturing,West,5,Loyal Customers,79,16,80845.0,4,4,3,3.6666666666666665,7,0.0,RM017
+SME0585,Company 585 Ltd,Professional Services,West,25,Loyal Customers,114,13,143256.0,3,3,4,3.3333333333333335,6,0.48,RM010
+SME0586,Company 586 Ltd,Manufacturing,North,5,Champions,7,50,3109383.0,5,5,5,5.0,7,0.0,RM019
+SME0587,Company 587 Ltd,Retail,North,5,Champions,63,53,3277299.0,4,5,5,4.666666666666667,7,0.0,RM014
+SME0588,Company 588 Ltd,Retail,West,100,Loyal Customers,123,19,173629.0,3,4,4,3.6666666666666665,7,0.0,RM011
+SME0589,Company 589 Ltd,Retail,Central,5,Can't Lose Them,226,9,112275.0,2,3,3,2.6666666666666665,4,1.14,RM002
+SME0590,Company 590 Ltd,Retail,Central,25,Champions,27,53,2821242.0,5,5,5,5.0,7,0.0,RM018
+SME0591,Company 591 Ltd,Retail,South,25,Loyal Customers,84,16,90304.0,4,4,3,3.6666666666666665,6,0.52,RM007
+SME0592,Company 592 Ltd,Professional Services,East,10,Loyal Customers,65,19,83168.0,4,4,3,3.6666666666666665,7,0.0,RM012
+SME0593,Company 593 Ltd,Retail,Central,100,Can't Lose Them,307,11,36439.0,2,3,2,2.3333333333333335,6,0.33,RM002
+SME0594,Company 594 Ltd,Manufacturing,North,5,Lost,260,1,2521.0,2,1,1,1.3333333333333333,1,1.14,RM020
+SME0595,Company 595 Ltd,Food & Beverage,Central,50,Lost,380,2,1740.0,1,1,1,1.0,2,0.71,RM018
+SME0596,Company 596 Ltd,Healthcare,South,200,Lost,405,4,9286.0,1,2,2,1.6666666666666667,4,0.71,RM006
+SME0597,Company 597 Ltd,Professional Services,South,25,Potential Loyalists,49,12,62365.0,5,3,2,3.3333333333333335,5,0.95,RM010
+SME0598,Company 598 Ltd,Retail,East,200,Lost,502,2,4604.0,1,1,1,1.0,2,0.71,RM020
+SME0599,Company 599 Ltd,Retail,Central,5,Lost,392,3,3870.0,1,2,1,1.3333333333333333,3,0.76,RM015
+SME0600,Company 600 Ltd,Retail,North,25,At Risk,143,8,51972.0,3,2,2,2.3333333333333335,5,0.67,RM005
+SME0601,Company 601 Ltd,Retail,North,10,Lost,386,4,12378.0,1,2,2,1.6666666666666667,3,0.95,RM020
+SME0602,Company 602 Ltd,Manufacturing,West,50,Can't Lose Them,241,10,66355.0,2,3,3,2.6666666666666665,6,0.38,RM003
+SME0603,Company 603 Ltd,Retail,North,500,Champions,20,75,19562443.0,5,5,5,5.0,7,0.0,RM005
+SME0604,Company 604 Ltd,Retail,East,10,Lost,364,2,4624.0,1,1,1,1.0,2,0.71,RM008
+SME0605,Company 605 Ltd,Retail,East,50,Loyal Customers,148,17,83193.0,3,4,3,3.3333333333333335,7,0.0,RM008
+SME0606,Company 606 Ltd,Healthcare,North,10,Champions,50,29,1239596.0,5,4,4,4.333333333333333,7,0.0,RM008
+SME0607,Company 607 Ltd,Retail,North,25,Champions,45,31,2084550.0,5,4,5,4.666666666666667,7,0.0,RM012
+SME0608,Company 608 Ltd,Manufacturing,West,25,Lost,334,6,59768.0,1,2,2,1.6666666666666667,5,0.48,RM008
+SME0609,Company 609 Ltd,Healthcare,North,200,Champions,25,98,19877266.0,5,5,5,5.0,7,0.0,RM011
+SME0610,Company 610 Ltd,Professional Services,West,50,Loyal Customers,172,15,145371.0,3,3,4,3.3333333333333335,7,0.0,RM014
+SME0611,Company 611 Ltd,Retail,West,10,Champions,46,54,1447312.0,5,5,4,4.666666666666667,7,0.0,RM008
+SME0612,Company 612 Ltd,Construction,North,5,Lost,326,1,1119.0,1,1,1,1.0,1,0.86,RM010
+SME0613,Company 613 Ltd,Professional Services,South,10,At Risk,136,7,57594.0,3,2,2,2.3333333333333335,5,0.67,RM007
+SME0614,Company 614 Ltd,Retail,South,10,Champions,61,36,744645.0,4,4,4,4.0,7,0.0,RM017
+SME0615,Company 615 Ltd,Food & Beverage,West,10,Loyal Customers,89,19,114485.0,4,4,3,3.6666666666666665,6,0.52,RM004
+SME0616,Company 616 Ltd,Food & Beverage,North,100,Lost,422,1,810.0,1,1,1,1.0,1,0.86,RM013
+SME0617,Company 617 Ltd,Retail,South,25,Lost,584,4,12381.0,1,2,2,1.6666666666666667,3,0.95,RM004
+SME0618,Company 618 Ltd,Manufacturing,North,25,Champions,30,29,841826.0,5,4,4,4.333333333333333,7,0.0,RM005
+SME0619,Company 619 Ltd,Construction,North,5,Loyal Customers,103,15,175988.0,4,3,4,3.6666666666666665,6,0.52,RM004
+SME0620,Company 620 Ltd,Professional Services,North,100,Champions,14,90,34755208.0,5,5,5,5.0,7,0.0,RM018
+SME0621,Company 621 Ltd,Retail,Central,50,Champions,50,41,2016418.0,5,5,5,5.0,7,0.0,RM006
+SME0622,Company 622 Ltd,Retail,North,5,Lost,353,2,1483.0,1,1,1,1.0,2,0.71,RM002
+SME0623,Company 623 Ltd,Manufacturing,Central,50,Loyal Customers,134,13,130709.0,3,3,3,3.0,6,0.43,RM011
+SME0624,Company 624 Ltd,Healthcare,West,25,New Customers,67,7,100782.0,4,2,3,3.0,6,0.43,RM014
+SME0625,Company 625 Ltd,Professional Services,South,5,Lost,212,8,34468.0,2,2,2,2.0,5,0.57,RM005
+SME0626,Company 626 Ltd,Manufacturing,South,25,Lost,247,4,5547.0,2,2,2,2.0,3,1.14,RM006
+SME0627,Company 627 Ltd,Healthcare,South,25,New Customers,75,5,45632.0,4,2,2,2.6666666666666665,3,1.52,RM010
+SME0628,Company 628 Ltd,Professional Services,South,10,Champions,28,54,999168.0,5,5,4,4.666666666666667,7,0.0,RM008
+SME0629,Company 629 Ltd,Retail,South,200,Lost,593,1,4159.0,1,1,1,1.0,1,0.86,RM014
+SME0630,Company 630 Ltd,Manufacturing,South,100,Champions,50,56,1674984.0,5,5,5,5.0,7,0.0,RM003
+SME0631,Company 631 Ltd,Professional Services,South,50,Champions,34,56,3864055.0,5,5,5,5.0,7,0.0,RM012
+SME0632,Company 632 Ltd,Food & Beverage,West,25,Lost,543,1,183.0,1,1,1,1.0,1,0.86,RM016
+SME0633,Company 633 Ltd,Healthcare,North,25,Loyal Customers,138,19,223947.0,3,4,4,3.6666666666666665,6,0.52,RM017
+SME0634,Company 634 Ltd,Healthcare,East,50,Loyal Customers,116,17,153950.0,3,4,4,3.6666666666666665,7,0.0,RM001
+SME0635,Company 635 Ltd,Retail,Central,25,Lost,299,7,48288.0,2,2,2,2.0,4,0.86,RM010
+SME0636,Company 636 Ltd,Healthcare,East,5,Can't Lose Them,201,19,80730.0,2,4,3,3.0,7,0.0,RM010
+SME0637,Company 637 Ltd,Healthcare,East,25,Loyal Customers,152,15,87460.0,3,3,3,3.0,6,0.43,RM002
+SME0638,Company 638 Ltd,Manufacturing,North,100,Lost,407,4,5522.0,1,2,2,1.6666666666666667,4,0.71,RM009
+SME0639,Company 639 Ltd,Manufacturing,North,25,Loyal Customers,138,11,92662.0,3,3,3,3.0,5,0.86,RM013
+SME0640,Company 640 Ltd,Manufacturing,North,5,Lost,345,2,3521.0,1,1,1,1.0,2,0.71,RM016
+SME0641,Company 641 Ltd,Retail,South,50,Potential Loyalists,86,16,50625.0,4,4,2,3.3333333333333335,7,0.0,RM018
+SME0642,Company 642 Ltd,Manufacturing,West,10,Loyal Customers,123,37,740654.0,3,5,4,4.0,7,0.0,RM019
+SME0643,Company 643 Ltd,Retail,South,10,Champions,80,59,2811683.0,4,5,5,4.666666666666667,7,0.0,RM012
+SME0644,Company 644 Ltd,Manufacturing,West,10,Loyal Customers,80,13,163321.0,4,3,4,3.6666666666666665,6,0.52,RM008
+SME0645,Company 645 Ltd,Retail,West,10,Lost,277,3,9259.0,2,2,2,2.0,3,1.14,RM017
+SME0646,Company 646 Ltd,Food & Beverage,East,50,Potential Loyalists,176,11,33576.0,3,3,2,2.6666666666666665,5,0.76,RM015
+SME0647,Company 647 Ltd,Professional Services,East,25,Lost,304,1,1032.0,2,1,1,1.3333333333333333,1,1.14,RM010
+SME0648,Company 648 Ltd,Professional Services,West,10,Potential Loyalists,166,9,40847.0,3,3,2,2.6666666666666665,4,1.14,RM015
+SME0649,Company 649 Ltd,Construction,West,100,Champions,31,48,919221.0,5,5,4,4.666666666666667,7,0.0,RM015
+SME0650,Company 650 Ltd,Healthcare,South,100,Lost,372,4,9377.0,1,2,2,1.6666666666666667,3,0.95,RM007
+SME0651,Company 651 Ltd,Retail,South,100,Can't Lose Them,202,10,89207.0,2,3,3,2.6666666666666665,6,0.38,RM013
+SME0652,Company 652 Ltd,Healthcare,East,10,Champions,11,83,14731447.0,5,5,5,5.0,7,0.0,RM017
+SME0653,Company 653 Ltd,Professional Services,North,25,Champions,78,47,1732113.0,4,5,5,4.666666666666667,7,0.0,RM009
+SME0654,Company 654 Ltd,Professional Services,West,500,Champions,18,57,1267433.0,5,5,4,4.666666666666667,7,0.0,RM008
+SME0655,Company 655 Ltd,Healthcare,South,50,Lost,275,4,8908.0,2,2,2,2.0,3,1.14,RM020
+SME0656,Company 656 Ltd,Retail,East,5,Champions,28,84,21286728.0,5,5,5,5.0,7,0.0,RM018
+SME0657,Company 657 Ltd,Manufacturing,South,5,New Customers,76,8,72035.0,4,2,3,3.0,5,0.86,RM013
+SME0658,Company 658 Ltd,Manufacturing,West,25,Loyal Customers,161,9,146097.0,3,3,4,3.3333333333333335,6,0.48,RM016
+SME0659,Company 659 Ltd,Professional Services,West,100,Lost,299,2,1334.0,2,1,1,1.3333333333333333,2,0.95,RM009
+SME0660,Company 660 Ltd,Professional Services,Central,25,Lost,357,4,3027.0,1,2,1,1.3333333333333333,3,0.76,RM012
+SME0661,Company 661 Ltd,Manufacturing,North,25,At Risk,167,5,20899.0,3,2,2,2.3333333333333335,3,1.33,RM012
+SME0662,Company 662 Ltd,Food & Beverage,Central,5,Lost,293,4,4046.0,2,2,1,1.6666666666666667,3,0.95,RM006
+SME0663,Company 663 Ltd,Professional Services,East,50,Champions,33,49,3543788.0,5,5,5,5.0,7,0.0,RM019
+SME0664,Company 664 Ltd,Manufacturing,South,100,Loyal Customers,149,11,118943.0,3,3,3,3.0,5,0.86,RM007
+SME0665,Company 665 Ltd,Retail,East,25,Loyal Customers,124,16,234471.0,3,4,4,3.6666666666666665,6,0.52,RM003
+SME0666,Company 666 Ltd,Retail,West,50,New Customers,104,8,31106.0,4,2,2,2.6666666666666665,5,0.76,RM016
+SME0667,Company 667 Ltd,Manufacturing,Central,200,Lost,385,2,1995.0,1,1,1,1.0,2,0.71,RM018
+SME0668,Company 668 Ltd,Retail,Central,10,Loyal Customers,160,14,199102.0,3,3,4,3.3333333333333335,7,0.0,RM016
+SME0669,Company 669 Ltd,Retail,Central,25,Champions,27,37,1980336.0,5,5,5,5.0,7,0.0,RM007
+SME0670,Company 670 Ltd,Manufacturing,East,10,Loyal Customers,55,10,127430.0,4,3,3,3.3333333333333335,6,0.48,RM004
+SME0671,Company 671 Ltd,Retail,West,50,Loyal Customers,156,14,135199.0,3,3,3,3.0,6,0.43,RM008
+SME0672,Company 672 Ltd,Food & Beverage,South,25,Loyal Customers,94,13,184184.0,4,3,4,3.6666666666666665,7,0.0,RM013
+SME0673,Company 673 Ltd,Retail,South,50,Champions,11,107,33097132.0,5,5,5,5.0,7,0.0,RM013
+SME0674,Company 674 Ltd,Healthcare,East,50,Lost,334,2,6171.0,1,1,2,1.3333333333333333,2,0.95,RM017
+SME0675,Company 675 Ltd,Healthcare,Central,25,Can't Lose Them,243,9,70476.0,2,3,3,2.6666666666666665,6,0.38,RM017
+SME0676,Company 676 Ltd,Food & Beverage,North,100,Champions,13,79,38685258.0,5,5,5,5.0,7,0.0,RM005
+SME0677,Company 677 Ltd,Retail,East,25,Can't Lose Them,229,11,47055.0,2,3,2,2.3333333333333335,5,0.67,RM006
+SME0678,Company 678 Ltd,Manufacturing,East,10,Lost,314,1,766.0,2,1,1,1.3333333333333333,1,1.14,RM019
+SME0679,Company 679 Ltd,Food & Beverage,West,50,At Risk,143,4,9600.0,3,2,2,2.3333333333333335,4,1.0,RM013
+SME0680,Company 680 Ltd,Construction,South,50,Lost,282,4,8804.0,2,2,2,2.0,4,0.86,RM014
+SME0681,Company 681 Ltd,Construction,East,10,Loyal Customers,137,14,153350.0,3,3,4,3.3333333333333335,6,0.48,RM004
+SME0682,Company 682 Ltd,Manufacturing,East,100,Lost,302,2,5409.0,2,1,2,1.6666666666666667,2,1.19,RM007
+SME0683,Company 683 Ltd,Retail,Central,100,Champions,44,49,2448567.0,5,5,5,5.0,7,0.0,RM008
+SME0684,Company 684 Ltd,Professional Services,Central,10,Loyal Customers,120,16,136564.0,3,4,3,3.3333333333333335,6,0.48,RM013
+SME0685,Company 685 Ltd,Food & Beverage,North,500,At Risk,163,6,38243.0,3,2,2,2.3333333333333335,3,1.33,RM006
+SME0686,Company 686 Ltd,Professional Services,West,5,Champions,60,32,1328404.0,4,4,4,4.0,6,0.57,RM006
+SME0687,Company 687 Ltd,Professional Services,North,10,Lost,525,1,965.0,1,1,1,1.0,1,0.86,RM003
+SME0688,Company 688 Ltd,Manufacturing,Central,10,Champions,104,31,2372861.0,4,4,5,4.333333333333333,7,0.0,RM003
+SME0689,Company 689 Ltd,Construction,South,100,Hibernating,318,7,120655.0,2,2,3,2.3333333333333335,5,0.67,RM013
+SME0690,Company 690 Ltd,Retail,Central,50,Potential Loyalists,120,11,49536.0,3,3,2,2.6666666666666665,6,0.38,RM002
+SME0691,Company 691 Ltd,Manufacturing,West,10,New Customers,63,7,75236.0,4,2,3,3.0,4,1.29,RM016
+SME0692,Company 692 Ltd,Healthcare,Central,25,Hibernating,218,7,110476.0,2,2,3,2.3333333333333335,6,0.33,RM006
+SME0693,Company 693 Ltd,Healthcare,West,50,Champions,100,23,886989.0,4,4,4,4.0,7,0.0,RM008
+SME0694,Company 694 Ltd,Manufacturing,West,5,Can't Lose Them,205,18,205252.0,2,4,4,3.3333333333333335,7,0.0,RM008
+SME0695,Company 695 Ltd,Retail,West,100,Lost,353,2,2716.0,1,1,1,1.0,2,0.71,RM006
+SME0696,Company 696 Ltd,Professional Services,West,100,Lost,274,5,26374.0,2,2,2,2.0,4,0.86,RM014
+SME0697,Company 697 Ltd,Manufacturing,West,25,Champions,43,23,1692660.0,5,4,5,4.666666666666667,7,0.0,RM003
+SME0698,Company 698 Ltd,Professional Services,South,200,Loyal Customers,175,19,198074.0,3,4,4,3.6666666666666665,6,0.52,RM010
+SME0699,Company 699 Ltd,Retail,North,25,Loyal Customers,105,13,153932.0,4,3,4,3.6666666666666665,5,1.05,RM003
+SME0700,Company 700 Ltd,Healthcare,East,500,Lost,207,2,2980.0,2,1,1,1.3333333333333333,1,1.14,RM012
+SME0701,Company 701 Ltd,Healthcare,North,50,Can't Lose Them,183,18,245263.0,2,4,4,3.3333333333333335,7,0.0,RM017
+SME0702,Company 702 Ltd,Retail,West,50,Lost,285,1,2417.0,2,1,1,1.3333333333333333,1,1.14,RM005
+SME0703,Company 703 Ltd,Manufacturing,South,10,Lost,540,3,7457.0,1,2,2,1.6666666666666667,3,0.95,RM020
+SME0704,Company 704 Ltd,Retail,Central,100,Loyal Customers,119,13,143975.0,3,3,4,3.3333333333333335,7,0.0,RM009
+SME0705,Company 705 Ltd,Retail,South,25,At Risk,117,7,64408.0,3,2,3,2.6666666666666665,3,1.52,RM020
+SME0706,Company 706 Ltd,Food & Beverage,West,10,Champions,60,34,2680339.0,4,4,5,4.333333333333333,7,0.0,RM007
+SME0707,Company 707 Ltd,Manufacturing,South,5,Champions,17,64,22359247.0,5,5,5,5.0,7,0.0,RM004
+SME0708,Company 708 Ltd,Construction,South,25,Lost,585,1,1370.0,1,1,1,1.0,1,0.86,RM013
+SME0709,Company 709 Ltd,Manufacturing,West,25,Champions,20,64,24758003.0,5,5,5,5.0,7,0.0,RM013
+SME0710,Company 710 Ltd,Professional Services,South,50,Champions,33,31,516565.0,5,4,4,4.333333333333333,7,0.0,RM010
+SME0711,Company 711 Ltd,Construction,East,100,Lost,660,1,746.0,1,1,1,1.0,1,0.86,RM018
+SME0712,Company 712 Ltd,Professional Services,East,5,Champions,36,57,2348506.0,5,5,5,5.0,7,0.0,RM017
+SME0713,Company 713 Ltd,Healthcare,South,50,Lost,472,2,3620.0,1,1,1,1.0,2,0.71,RM020
+SME0714,Company 714 Ltd,Healthcare,Central,10,Lost,312,2,2604.0,2,1,1,1.3333333333333333,2,0.95,RM020
+SME0715,Company 715 Ltd,Manufacturing,West,100,Loyal Customers,73,9,129633.0,4,3,3,3.3333333333333335,6,0.48,RM013
+SME0716,Company 716 Ltd,Food & Beverage,East,100,Can't Lose Them,198,17,150449.0,2,4,4,3.3333333333333335,7,0.0,RM017
+SME0717,Company 717 Ltd,Construction,Central,25,Loyal Customers,78,13,151526.0,4,3,4,3.6666666666666665,6,0.52,RM004
+SME0718,Company 718 Ltd,Food & Beverage,South,50,Loyal Customers,94,15,127508.0,4,3,3,3.3333333333333335,7,0.0,RM001
+SME0719,Company 719 Ltd,Retail,Central,10,Lost,531,2,5461.0,1,1,2,1.3333333333333333,1,1.14,RM001
+SME0720,Company 720 Ltd,Professional Services,North,25,Champions,3,78,8059577.0,5,5,5,5.0,7,0.0,RM015
+SME0721,Company 721 Ltd,Food & Beverage,East,100,Lost,387,2,1606.0,1,1,1,1.0,2,0.71,RM013
+SME0722,Company 722 Ltd,Retail,South,25,Can't Lose Them,273,12,42452.0,2,3,2,2.3333333333333335,6,0.33,RM017
+SME0723,Company 723 Ltd,Retail,West,25,Loyal Customers,137,14,91454.0,3,3,3,3.0,6,0.43,RM008
+SME0724,Company 724 Ltd,Professional Services,South,25,At Risk,163,5,41697.0,3,2,2,2.3333333333333335,3,1.33,RM018
+SME0725,Company 725 Ltd,Professional Services,West,100,Lost,271,4,10681.0,2,2,2,2.0,4,0.86,RM013
+SME0726,Company 726 Ltd,Construction,South,10,Can't Lose Them,221,12,39756.0,2,3,2,2.3333333333333335,6,0.33,RM014
+SME0727,Company 727 Ltd,Retail,Central,10,Champions,36,42,2644103.0,5,5,5,5.0,7,0.0,RM008
+SME0728,Company 728 Ltd,Construction,Central,50,Champions,60,59,2383250.0,4,5,5,4.666666666666667,7,0.0,RM008
+SME0729,Company 729 Ltd,Retail,Central,100,Lost,255,1,1805.0,2,1,1,1.3333333333333333,1,1.14,RM015
+SME0730,Company 730 Ltd,Retail,North,5,Loyal Customers,146,19,150577.0,3,4,4,3.6666666666666665,7,0.0,RM013
+SME0731,Company 731 Ltd,Retail,West,10,Champions,26,60,21283265.0,5,5,5,5.0,7,0.0,RM007
+SME0732,Company 732 Ltd,Construction,Central,5,Lost,417,2,2170.0,1,1,1,1.0,2,0.71,RM005
+SME0733,Company 733 Ltd,Professional Services,North,10,Loyal Customers,108,8,109525.0,4,3,3,3.3333333333333335,6,0.48,RM017
+SME0734,Company 734 Ltd,Healthcare,West,25,Lost,212,3,6829.0,2,2,2,2.0,3,1.14,RM016
+SME0735,Company 735 Ltd,Manufacturing,South,50,Lost,247,1,976.0,2,1,1,1.3333333333333333,1,1.14,RM002
+SME0736,Company 736 Ltd,Food & Beverage,North,50,Champions,7,60,17970206.0,5,5,5,5.0,7,0.0,RM018
+SME0737,Company 737 Ltd,Manufacturing,East,50,Lost,240,4,5962.0,2,2,2,2.0,3,1.14,RM017
+SME0738,Company 738 Ltd,Construction,North,25,Lost,198,3,1714.0,2,2,1,1.6666666666666667,3,0.95,RM007
+SME0739,Company 739 Ltd,Healthcare,North,100,Loyal Customers,105,13,115552.0,4,3,3,3.3333333333333335,7,0.0,RM013
+SME0740,Company 740 Ltd,Manufacturing,West,25,Loyal Customers,173,8,64287.0,3,3,3,3.0,6,0.43,RM018
+SME0741,Company 741 Ltd,Healthcare,South,200,Champions,15,39,1492434.0,5,5,4,4.666666666666667,7,0.0,RM014
+SME0742,Company 742 Ltd,Manufacturing,East,50,Champions,107,24,1722454.0,4,4,5,4.333333333333333,6,0.62,RM018
+SME0743,Company 743 Ltd,Professional Services,Central,5,Loyal Customers,36,18,71916.0,5,4,3,4.0,6,0.57,RM013
+SME0744,Company 744 Ltd,Healthcare,Central,50,Champions,6,92,10288343.0,5,5,5,5.0,7,0.0,RM011
+SME0745,Company 745 Ltd,Manufacturing,North,10,Champions,33,59,2378177.0,5,5,5,5.0,7,0.0,RM016
+SME0746,Company 746 Ltd,Food & Beverage,West,50,Can't Lose Them,186,18,212646.0,2,4,4,3.3333333333333335,6,0.48,RM017
+SME0747,Company 747 Ltd,Manufacturing,West,5,Champions,71,57,2056552.0,4,5,5,4.666666666666667,7,0.0,RM008
+SME0748,Company 748 Ltd,Healthcare,Central,10,Lost,390,3,5004.0,1,2,2,1.6666666666666667,3,0.95,RM019
+SME0749,Company 749 Ltd,Food & Beverage,East,100,Lost,551,1,1617.0,1,1,1,1.0,1,0.86,RM020
+SME0750,Company 750 Ltd,Professional Services,South,10,Champions,98,57,2475030.0,4,5,5,4.666666666666667,7,0.0,RM015
+SME0751,Company 751 Ltd,Retail,East,100,Champions,111,58,3236459.0,4,5,5,4.666666666666667,7,0.0,RM009
+SME0752,Company 752 Ltd,Food & Beverage,South,10,Champions,39,27,530872.0,5,4,4,4.333333333333333,7,0.0,RM020
+SME0753,Company 753 Ltd,Professional Services,Central,50,Champions,34,52,1867992.0,5,5,5,5.0,7,0.0,RM010
+SME0754,Company 754 Ltd,Manufacturing,South,50,Loyal Customers,55,17,113878.0,4,4,3,3.6666666666666665,7,0.0,RM012
+SME0755,Company 755 Ltd,Retail,West,25,Champions,31,52,2190238.0,5,5,5,5.0,7,0.0,RM020
+SME0756,Company 756 Ltd,Construction,North,10,Lost,604,1,2660.0,1,1,1,1.0,1,0.86,RM001
+SME0757,Company 757 Ltd,Professional Services,North,10,Potential Loyalists,173,14,54316.0,3,3,2,2.6666666666666665,7,0.0,RM020
+SME0758,Company 758 Ltd,Healthcare,Central,5,Loyal Customers,117,10,79647.0,3,3,3,3.0,6,0.43,RM009
+SME0759,Company 759 Ltd,Food & Beverage,West,10,Loyal Customers,103,19,116728.0,4,4,3,3.6666666666666665,6,0.52,RM015
+SME0760,Company 760 Ltd,Construction,East,50,Loyal Customers,82,16,64355.0,4,4,3,3.6666666666666665,5,1.05,RM001
+SME0761,Company 761 Ltd,Retail,West,200,Lost,397,3,6581.0,1,2,2,1.6666666666666667,3,0.95,RM012
+SME0762,Company 762 Ltd,Manufacturing,North,100,Champions,23,21,1468644.0,5,4,4,4.333333333333333,7,0.0,RM003
+SME0763,Company 763 Ltd,Manufacturing,North,50,Loyal Customers,106,14,133005.0,4,3,3,3.3333333333333335,7,0.0,RM011
+SME0764,Company 764 Ltd,Professional Services,West,50,Lost,359,1,1086.0,1,1,1,1.0,1,0.86,RM002
+SME0765,Company 765 Ltd,Retail,West,50,New Customers,63,7,110181.0,4,2,3,3.0,6,0.43,RM016
+SME0766,Company 766 Ltd,Professional Services,North,10,Lost,185,6,41756.0,2,2,2,2.0,4,0.86,RM009
+SME0767,Company 767 Ltd,Construction,East,100,Loyal Customers,91,13,122338.0,4,3,3,3.3333333333333335,7,0.0,RM015
+SME0768,Company 768 Ltd,Food & Beverage,Central,50,Champions,8,118,13452404.0,5,5,5,5.0,7,0.0,RM012
+SME0769,Company 769 Ltd,Manufacturing,Central,25,Lost,614,2,4083.0,1,1,1,1.0,2,0.71,RM001
+SME0770,Company 770 Ltd,Construction,West,5,Loyal Customers,171,9,101136.0,3,3,3,3.0,6,0.43,RM013
+SME0771,Company 771 Ltd,Retail,Central,25,Loyal Customers,114,10,84524.0,3,3,3,3.0,7,0.0,RM014
+SME0772,Company 772 Ltd,Construction,North,25,Can't Lose Them,197,12,114864.0,2,3,3,2.6666666666666665,6,0.38,RM008
+SME0773,Company 773 Ltd,Retail,North,100,Champions,67,38,2931466.0,4,5,5,4.666666666666667,7,0.0,RM008
+SME0774,Company 774 Ltd,Manufacturing,West,25,Loyal Customers,86,15,93112.0,4,3,3,3.3333333333333335,6,0.48,RM012
+SME0775,Company 775 Ltd,Construction,West,25,Champions,16,28,694526.0,5,4,4,4.333333333333333,7,0.0,RM001
+SME0776,Company 776 Ltd,Retail,West,200,Potential Loyalists,153,14,61374.0,3,3,2,2.6666666666666665,6,0.38,RM011
+SME0777,Company 777 Ltd,Manufacturing,East,5,Lost,718,1,778.0,1,1,1,1.0,1,0.86,RM008
+SME0778,Company 778 Ltd,Professional Services,Central,25,Loyal Customers,168,10,93761.0,3,3,3,3.0,4,1.29,RM010
+SME0779,Company 779 Ltd,Professional Services,West,5,Lost,493,1,1559.0,1,1,1,1.0,1,0.86,RM019
+SME0780,Company 780 Ltd,Professional Services,South,50,Champions,70,24,477613.0,4,4,4,4.0,7,0.0,RM011
+SME0781,Company 781 Ltd,Professional Services,South,100,Can't Lose Them,205,17,134614.0,2,4,3,3.0,7,0.0,RM007
+SME0782,Company 782 Ltd,Healthcare,North,10,Loyal Customers,76,12,149728.0,4,3,4,3.6666666666666665,7,0.0,RM011
+SME0783,Company 783 Ltd,Manufacturing,Central,100,At Risk,170,3,1893.0,3,2,1,2.0,2,1.43,RM017
+SME0784,Company 784 Ltd,Manufacturing,West,10,Lost,233,2,1992.0,2,1,1,1.3333333333333333,2,0.95,RM001
+SME0785,Company 785 Ltd,Retail,South,100,Lost,550,4,3998.0,1,2,1,1.3333333333333333,4,0.57,RM008
+SME0786,Company 786 Ltd,Food & Beverage,Central,50,Lost,605,2,4466.0,1,1,1,1.0,1,0.86,RM006
+SME0787,Company 787 Ltd,Professional Services,North,100,Champions,29,41,1780813.0,5,5,5,5.0,7,0.0,RM018
+SME0788,Company 788 Ltd,Healthcare,East,5,New Customers,65,7,44699.0,4,2,2,2.6666666666666665,6,0.38,RM006
+SME0789,Company 789 Ltd,Healthcare,Central,200,Champions,76,23,358305.0,4,4,4,4.0,6,0.57,RM005
+SME0790,Company 790 Ltd,Food & Beverage,Central,50,Loyal Customers,141,9,76123.0,3,3,3,3.0,6,0.43,RM013
+SME0791,Company 791 Ltd,Retail,East,10,Loyal Customers,42,13,95854.0,5,3,3,3.6666666666666665,7,0.0,RM019
+SME0792,Company 792 Ltd,Professional Services,Central,100,Champions,56,28,1815506.0,4,4,5,4.333333333333333,7,0.0,RM008
+SME0793,Company 793 Ltd,Healthcare,North,10,Lost,306,2,2110.0,2,1,1,1.3333333333333333,2,0.95,RM009
+SME0794,Company 794 Ltd,Professional Services,North,100,Lost,649,2,4394.0,1,1,1,1.0,1,0.86,RM017
+SME0795,Company 795 Ltd,Retail,East,5,Champions,19,67,25669841.0,5,5,5,5.0,7,0.0,RM003
+SME0796,Company 796 Ltd,Food & Beverage,West,50,Loyal Customers,152,16,83234.0,3,4,3,3.3333333333333335,6,0.48,RM019
+SME0797,Company 797 Ltd,Food & Beverage,South,25,Loyal Customers,102,16,116978.0,4,4,3,3.6666666666666665,7,0.0,RM011
+SME0798,Company 798 Ltd,Professional Services,West,5,Lost,519,2,2081.0,1,1,1,1.0,2,0.71,RM017
+SME0799,Company 799 Ltd,Professional Services,Central,10,Champions,28,23,1856975.0,5,4,5,4.666666666666667,7,0.0,RM019
+SME0800,Company 800 Ltd,Food & Beverage,South,5,Champions,26,58,3556451.0,5,5,5,5.0,7,0.0,RM002

@@ -1,0 +1,9 @@
+segment,customers,avg_recency,avg_frequency,total_revenue,avg_revenue,avg_products,avg_crosssell_score,revenue_share_pct
+At Risk,39,154.7,5.6,1736010.0,44513.1,3.8,1.1,0.1
+Can't Lose Them,59,219.2,13.8,6943815.0,117691.8,6.2,0.3,0.5
+Champions,244,45.0,48.1,1439330981.0,5898897.5,6.9,0.1,97.2
+Hibernating,12,260.3,7.4,1173883.0,97823.6,4.8,0.7,0.1
+Lost,249,388.8,2.8,1965503.0,7893.6,2.3,0.9,0.1
+Loyal Customers,153,126.8,14.8,26595369.0,173825.9,6.2,0.4,1.8
+New Customers,20,80.6,7.0,1274029.0,63701.4,4.7,0.9,0.1
+Potential Loyalists,24,129.0,12.1,1151496.0,47979.0,5.8,0.5,0.1

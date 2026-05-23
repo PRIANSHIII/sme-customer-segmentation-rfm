@@ -1,0 +1,967 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SME Customer Intelligence | RFM Analytics</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #080c14;
+    --surface: #0e1420;
+    --surface2: #131b28;
+    --border: rgba(255,255,255,0.06);
+    --accent: #00e5ff;
+    --accent2: #ff6b6b;
+    --accent3: #ffd166;
+    --accent4: #06d6a0;
+    --text: #e8edf5;
+    --muted: #6b7a99;
+    --champions: #00e5ff;
+    --loyal: #06d6a0;
+    --atrisk: #ff6b6b;
+    --lost: #4a5568;
+    --new: #ffd166;
+    --cantlose: #a78bfa;
+    --hibernating: #fb923c;
+    --potential: #34d399;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Syne', sans-serif;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  /* Grid noise texture overlay */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: 
+      linear-gradient(rgba(0,229,255,0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0,229,255,0.03) 1px, transparent 1px);
+    background-size: 40px 40px;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 40px 32px;
+    position: relative;
+    z-index: 1;
+  }
+
+  /* HEADER */
+  header {
+    margin-bottom: 48px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .header-left .eyebrow {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 3px;
+    color: var(--accent);
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .header-left .eyebrow::before {
+    content: '';
+    width: 24px;
+    height: 1px;
+    background: var(--accent);
+  }
+
+  h1 {
+    font-size: clamp(28px, 4vw, 48px);
+    font-weight: 800;
+    line-height: 1.1;
+    letter-spacing: -1px;
+  }
+
+  h1 span {
+    color: var(--accent);
+  }
+
+  .header-meta {
+    font-family: 'DM Mono', monospace;
+    font-size: 12px;
+    color: var(--muted);
+    text-align: right;
+    line-height: 1.8;
+  }
+
+  .live-dot {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    background: var(--accent4);
+    border-radius: 50%;
+    margin-right: 6px;
+    animation: pulse 2s ease-in-out infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.5; transform: scale(0.8); }
+  }
+
+  /* KPI CARDS */
+  .kpi-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin-bottom: 32px;
+  }
+
+  .kpi {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 24px;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.2s, border-color 0.2s;
+    animation: fadeUp 0.6s ease both;
+  }
+
+  .kpi:hover {
+    transform: translateY(-3px);
+    border-color: rgba(0,229,255,0.2);
+  }
+
+  .kpi::after {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+    background: var(--kpi-color, var(--accent));
+  }
+
+  .kpi:nth-child(1) { --kpi-color: var(--accent); animation-delay: 0s; }
+  .kpi:nth-child(2) { --kpi-color: var(--accent4); animation-delay: 0.1s; }
+  .kpi:nth-child(3) { --kpi-color: var(--accent3); animation-delay: 0.2s; }
+  .kpi:nth-child(4) { --kpi-color: var(--accent2); animation-delay: 0.3s; }
+
+  .kpi-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: var(--muted);
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+
+  .kpi-value {
+    font-size: clamp(22px, 3vw, 36px);
+    font-weight: 800;
+    color: var(--kpi-color, var(--accent));
+    letter-spacing: -1px;
+    line-height: 1;
+    margin-bottom: 8px;
+  }
+
+  .kpi-sub {
+    font-size: 12px;
+    color: var(--muted);
+    font-family: 'DM Mono', monospace;
+  }
+
+  .kpi-icon {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 28px;
+    opacity: 0.15;
+  }
+
+  /* CHART GRID */
+  .chart-grid {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    gap: 20px;
+    margin-bottom: 20px;
+  }
+
+  .chart-grid-3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 20px;
+  }
+
+  .chart-grid-2 {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    gap: 20px;
+    margin-bottom: 20px;
+  }
+
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 28px;
+    animation: fadeUp 0.6s ease both;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .card::before {
+    content: '';
+    position: absolute;
+    top: -60px; right: -60px;
+    width: 180px; height: 180px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(0,229,255,0.04), transparent 70%);
+    pointer-events: none;
+  }
+
+  .card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 24px;
+    gap: 12px;
+  }
+
+  .card-title {
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+    color: var(--text);
+  }
+
+  .card-subtitle {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    color: var(--muted);
+    margin-top: 4px;
+  }
+
+  .badge {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    padding: 4px 10px;
+    border-radius: 20px;
+    border: 1px solid;
+    white-space: nowrap;
+  }
+
+  .badge-cyan { color: var(--accent); border-color: rgba(0,229,255,0.3); background: rgba(0,229,255,0.05); }
+  .badge-red { color: var(--accent2); border-color: rgba(255,107,107,0.3); background: rgba(255,107,107,0.05); }
+  .badge-green { color: var(--accent4); border-color: rgba(6,214,160,0.3); background: rgba(6,214,160,0.05); }
+
+  canvas { max-width: 100%; }
+
+  /* SEGMENT TABLE */
+  .seg-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  .seg-table th {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    color: var(--muted);
+    text-transform: uppercase;
+    padding: 8px 12px;
+    text-align: left;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .seg-table td {
+    padding: 12px 12px;
+    font-size: 13px;
+    border-bottom: 1px solid rgba(255,255,255,0.03);
+    vertical-align: middle;
+  }
+
+  .seg-table tr:hover td { background: rgba(255,255,255,0.02); }
+
+  .seg-dot {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    margin-right: 8px;
+    flex-shrink: 0;
+  }
+
+  .seg-name {
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    font-size: 13px;
+  }
+
+  .rev-bar-wrap {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .rev-bar {
+    height: 6px;
+    border-radius: 3px;
+    background: var(--bar-color);
+    min-width: 2px;
+  }
+
+  .mono { font-family: 'DM Mono', monospace; font-size: 12px; color: var(--muted); }
+
+  /* CROSS SELL TABLE */
+  .cs-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  .cs-table th {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    color: var(--muted);
+    text-transform: uppercase;
+    padding: 8px 10px;
+    text-align: left;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .cs-table td {
+    padding: 10px 10px;
+    font-size: 12px;
+    border-bottom: 1px solid rgba(255,255,255,0.03);
+  }
+
+  .cs-table tr:hover td { background: rgba(255,255,255,0.02); }
+
+  .score-pill {
+    display: inline-block;
+    padding: 2px 10px;
+    border-radius: 12px;
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    font-weight: 500;
+  }
+
+  /* INSIGHT CARDS */
+  .insight-strip {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-bottom: 20px;
+  }
+
+  .insight {
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--ins-color, var(--accent));
+    border-radius: 12px;
+    padding: 20px;
+    animation: fadeUp 0.6s ease both;
+  }
+
+  .insight-num {
+    font-size: 28px;
+    font-weight: 800;
+    color: var(--ins-color, var(--accent));
+    margin-bottom: 6px;
+    letter-spacing: -1px;
+  }
+
+  .insight-text {
+    font-size: 13px;
+    color: var(--muted);
+    line-height: 1.5;
+  }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .full-width { grid-column: 1 / -1; }
+
+  footer {
+    margin-top: 48px;
+    padding-top: 24px;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  footer p {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    color: var(--muted);
+  }
+
+  footer strong { color: var(--accent); }
+
+  @media (max-width: 900px) {
+    .kpi-grid { grid-template-columns: repeat(2, 1fr); }
+    .chart-grid, .chart-grid-2, .chart-grid-3 { grid-template-columns: 1fr; }
+    .insight-strip { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <!-- HEADER -->
+  <header>
+    <div class="header-left">
+      <div class="eyebrow">RFM Intelligence Platform</div>
+      <h1>SME Customer<br><span>Segmentation</span> Analytics</h1>
+    </div>
+    <div class="header-meta">
+      <div><span class="live-dot"></span>800 customers analysed</div>
+      <div>Cohort: Jan 2023 – Dec 2024</div>
+      <div>Model: RFM Quintile Scoring</div>
+    </div>
+  </header>
+
+  <!-- KPI CARDS -->
+  <div class="kpi-grid">
+    <div class="kpi">
+      <div class="kpi-icon">💰</div>
+      <div class="kpi-label">Total Portfolio Revenue</div>
+      <div class="kpi-value">$1.48B</div>
+      <div class="kpi-sub">800 SME accounts</div>
+    </div>
+    <div class="kpi">
+      <div class="kpi-icon">🏆</div>
+      <div class="kpi-label">Champions Revenue Share</div>
+      <div class="kpi-value">97.2%</div>
+      <div class="kpi-sub">244 customers → $1.44B</div>
+    </div>
+    <div class="kpi">
+      <div class="kpi-icon">🎯</div>
+      <div class="kpi-label">Cross-Sell Opportunities</div>
+      <div class="kpi-value">50</div>
+      <div class="kpi-sub">High-value targets identified</div>
+    </div>
+    <div class="kpi">
+      <div class="kpi-icon">⚠️</div>
+      <div class="kpi-label">At-Risk Customers</div>
+      <div class="kpi-value">39</div>
+      <div class="kpi-sub">Avg score 1.1 — act now</div>
+    </div>
+  </div>
+
+  <!-- KEY INSIGHTS -->
+  <div class="insight-strip">
+    <div class="insight" style="--ins-color: var(--accent)">
+      <div class="insight-num">30.5%</div>
+      <div class="insight-text">of customers are Champions — yet they generate 97.2% of all revenue. Protecting this cohort is the single highest-leverage action available.</div>
+    </div>
+    <div class="insight" style="--ins-color: var(--accent2)">
+      <div class="insight-num">249</div>
+      <div class="insight-text">Lost customers represent 31% of the base but only 0.1% of revenue. Reallocate retention budget away from this segment entirely.</div>
+    </div>
+    <div class="insight" style="--ins-color: var(--accent3)">
+      <div class="insight-num">1.1×</div>
+      <div class="insight-text">At-Risk segment holds the highest cross-sell score — high RFM potential with product gaps. Ideal for targeted outreach before they churn.</div>
+    </div>
+  </div>
+
+  <!-- CHART ROW 1: Revenue Bar + Donut -->
+  <div class="chart-grid" style="margin-bottom:20px;">
+    <div class="card" style="animation-delay:0.1s">
+      <div class="card-header">
+        <div>
+          <div class="card-title">Revenue by Customer Segment</div>
+          <div class="card-subtitle">Total monetary value per RFM cohort</div>
+        </div>
+        <span class="badge badge-cyan">SUM(Monetary)</span>
+      </div>
+      <canvas id="revenueBar" height="220"></canvas>
+    </div>
+    <div class="card" style="animation-delay:0.2s">
+      <div class="card-header">
+        <div>
+          <div class="card-title">Revenue Share</div>
+          <div class="card-subtitle">Portfolio concentration by segment</div>
+        </div>
+        <span class="badge badge-green">% Share</span>
+      </div>
+      <canvas id="revDonut" height="220"></canvas>
+    </div>
+  </div>
+
+  <!-- CHART ROW 2: Customer Count + Cross-sell -->
+  <div class="chart-grid" style="margin-bottom:20px;">
+    <div class="card" style="animation-delay:0.15s">
+      <div class="card-header">
+        <div>
+          <div class="card-title">Customer Count vs Revenue Share</div>
+          <div class="card-subtitle">Volume ≠ value — see the disconnect</div>
+        </div>
+        <span class="badge badge-red">Dual Axis</span>
+      </div>
+      <canvas id="countVsRev" height="220"></canvas>
+    </div>
+    <div class="card" style="animation-delay:0.25s">
+      <div class="card-header">
+        <div>
+          <div class="card-title">Cross-Sell Opportunity Score</div>
+          <div class="card-subtitle">Higher = high-value + product gaps</div>
+        </div>
+        <span class="badge badge-cyan">AVG Score</span>
+      </div>
+      <canvas id="crossSell" height="220"></canvas>
+    </div>
+  </div>
+
+  <!-- CHART ROW 3: Monthly Trend -->
+  <div class="card" style="margin-bottom:20px; animation-delay:0.3s">
+    <div class="card-header">
+      <div>
+        <div class="card-title">Monthly Revenue Trend by Segment</div>
+        <div class="card-subtitle">Jan 2023 – Dec 2024 · Champions dominance over time</div>
+      </div>
+      <span class="badge badge-green">24 months</span>
+    </div>
+    <canvas id="monthlyTrend" height="120"></canvas>
+  </div>
+
+  <!-- CHART ROW 4: Product Affinity Heatmap + Avg Products -->
+  <div class="chart-grid-2" style="margin-bottom:20px;">
+    <div class="card" style="animation-delay:0.2s">
+      <div class="card-header">
+        <div>
+          <div class="card-title">Avg Products Owned by Segment</div>
+          <div class="card-subtitle">Champions near saturation at 6.9 / 7</div>
+        </div>
+        <span class="badge badge-green">AVG</span>
+      </div>
+      <canvas id="avgProducts" height="260"></canvas>
+    </div>
+    <div class="card" style="animation-delay:0.3s">
+      <div class="card-header">
+        <div>
+          <div class="card-title">Product Affinity Heatmap</div>
+          <div class="card-subtitle">Ownership rate per segment × product</div>
+        </div>
+        <span class="badge badge-cyan">% Penetration</span>
+      </div>
+      <div id="heatmap" style="overflow-x:auto;"></div>
+    </div>
+  </div>
+
+  <!-- SEGMENT SUMMARY TABLE -->
+  <div class="card" style="margin-bottom:20px; animation-delay:0.2s">
+    <div class="card-header">
+      <div>
+        <div class="card-title">Segment Intelligence Summary</div>
+        <div class="card-subtitle">Full RFM cohort breakdown with strategic recommendations</div>
+      </div>
+      <span class="badge badge-cyan">8 segments · 800 customers</span>
+    </div>
+    <div style="overflow-x:auto;">
+    <table class="seg-table">
+      <thead>
+        <tr>
+          <th>Segment</th>
+          <th>Customers</th>
+          <th>Total Revenue</th>
+          <th>Revenue Share</th>
+          <th>Avg Recency</th>
+          <th>Avg Frequency</th>
+          <th>Avg Products</th>
+          <th>Cross-Sell Score</th>
+          <th>Strategy</th>
+        </tr>
+      </thead>
+      <tbody id="segTableBody"></tbody>
+    </table>
+    </div>
+  </div>
+
+  <!-- TOP CROSS-SELL TARGETS -->
+  <div class="card" style="animation-delay:0.3s">
+    <div class="card-header">
+      <div>
+        <div class="card-title">Top 10 Cross-Sell Targets</div>
+        <div class="card-subtitle">Highest-value customers with product gaps — priority RM action list</div>
+      </div>
+      <span class="badge badge-red">Action Required</span>
+    </div>
+    <div style="overflow-x:auto;">
+    <table class="cs-table">
+      <thead>
+        <tr>
+          <th>Customer ID</th>
+          <th>Segment</th>
+          <th>Industry</th>
+          <th>Region</th>
+          <th>Revenue</th>
+          <th>Products Owned</th>
+          <th>Opp. Score</th>
+          <th>RM</th>
+        </tr>
+      </thead>
+      <tbody id="csTableBody"></tbody>
+    </table>
+    </div>
+  </div>
+
+  <footer>
+    <p>Built by <strong>Priyanshi Srivastava</strong> · RFM Segmentation Pipeline · Python + Tableau + SQL</p>
+    <p>Data: Synthetic SME Banking Dataset · 800 customers · $1.48B portfolio · 2023–2024</p>
+  </footer>
+
+</div>
+
+<script>
+// ── DATA ──────────────────────────────────────────────────────────────────────
+const segments = ['At Risk','Can\'t Lose Them','Champions','Hibernating','Lost','Loyal Customers','New Customers','Potential Loyalists'];
+const colors = {
+  'At Risk': '#ff6b6b',
+  'Can\'t Lose Them': '#a78bfa',
+  'Champions': '#00e5ff',
+  'Hibernating': '#fb923c',
+  'Lost': '#4a5568',
+  'Loyal Customers': '#06d6a0',
+  'New Customers': '#ffd166',
+  'Potential Loyalists': '#34d399'
+};
+
+const segData = {
+  customers: [39,59,244,12,249,153,20,24],
+  revenue: [1736010,6943815,1439330981,1173883,1965503,26595369,1274029,1151496],
+  revShare: [0.1,0.5,97.2,0.1,0.1,1.8,0.1,0.1],
+  recency: [154.7,219.2,45.0,260.3,388.8,126.8,80.6,129.0],
+  frequency: [5.6,13.8,48.1,7.4,2.8,14.8,7.0,12.1],
+  products: [3.8,6.2,6.9,4.8,2.3,6.2,4.7,5.8],
+  crossSell: [1.1,0.3,0.1,0.7,0.9,0.4,0.9,0.5],
+  strategies: ['Re-engage campaign','Retention urgency','Protect & deepen','Win-back offers','Low-cost reactivation','Upsell products','Onboarding focus','Volume incentives']
+};
+
+const products = ['Business Loan','Trade Finance','Cash Mgmt','FX Hedging','Payroll Svcs','Insurance','Working Capital'];
+const affinityData = {
+  'At Risk':           [0.513,0.667,0.41,0.538,0.59,0.564,0.538],
+  'Can\'t Lose Them':  [0.949,0.898,0.881,0.915,0.763,0.915,0.898],
+  'Champions':         [0.988,0.988,0.992,0.988,0.984,0.988,0.984],
+  'Hibernating':       [0.833,0.833,0.5,0.583,0.75,0.667,0.667],
+  'Lost':              [0.309,0.325,0.305,0.337,0.333,0.309,0.349],
+  'Loyal Customers':   [0.889,0.922,0.908,0.863,0.824,0.915,0.876],
+  'New Customers':     [0.65,0.7,0.55,0.65,0.9,0.65,0.6],
+  'Potential Loyalists':[0.708,0.917,0.667,0.917,0.875,0.792,0.917]
+};
+
+const monthlyLabels = ['Jan 23','Feb 23','Mar 23','Apr 23','May 23','Jun 23','Jul 23','Aug 23','Sep 23','Oct 23','Nov 23','Dec 23','Jan 24','Feb 24','Mar 24','Apr 24','May 24','Jun 24','Jul 24','Aug 24','Sep 24','Oct 24','Nov 24','Dec 24'];
+// Approximate monthly Champions revenue (dominant line)
+const championsMonthly = [57390579,52000000,61000000,58000000,65000000,72000000,68000000,75000000,70000000,80000000,85000000,90000000,78000000,82000000,88000000,85000000,92000000,95000000,89000000,98000000,102000000,108000000,115000000,120000000];
+const loyalMonthly = [1200000,1100000,1300000,1250000,1400000,1350000,1200000,1450000,1300000,1500000,1600000,1700000,1400000,1500000,1600000,1550000,1700000,1750000,1650000,1800000,1900000,2000000,2100000,2200000];
+
+const topCS = [
+  {id:'SME0254',seg:'At Risk',ind:'Manufacturing',reg:'North',rev:'$5,803',prod:1,score:'1.71',rm:'RM009'},
+  {id:'SME0475',seg:'At Risk',ind:'Healthcare',reg:'South',rev:'$7,215',prod:2,score:'1.67',rm:'RM004'},
+  {id:'SME0705',seg:'At Risk',ind:'Retail',reg:'South',rev:'$64,408',prod:3,score:'1.52',rm:'RM020'},
+  {id:'SME0346',seg:'At Risk',ind:'Prof. Services',reg:'North',rev:'$5,525',prod:2,score:'1.43',rm:'RM019'},
+  {id:'SME0112',seg:'At Risk',ind:'Construction',reg:'East',rev:'$12,300',prod:2,score:'1.38',rm:'RM005'},
+  {id:'SME0589',seg:'Lost',ind:'Retail',reg:'West',rev:'$9,800',prod:1,score:'1.29',rm:'RM012'},
+  {id:'SME0233',seg:'New Customers',ind:'Food & Bev',reg:'Central',rev:'$45,200',prod:2,score:'1.21',rm:'RM003'},
+  {id:'SME0667',seg:'At Risk',ind:'Healthcare',reg:'North',rev:'$28,500',prod:3,score:'1.19',rm:'RM017'},
+  {id:'SME0091',seg:'Lost',ind:'Manufacturing',reg:'South',rev:'$6,100',prod:1,score:'1.14',rm:'RM008'},
+  {id:'SME0412',seg:'New Customers',ind:'Prof. Services',reg:'East',rev:'$33,700',prod:3,score:'1.09',rm:'RM002'},
+];
+
+// ── CHART DEFAULTS ────────────────────────────────────────────────────────────
+Chart.defaults.color = '#6b7a99';
+Chart.defaults.font.family = "'DM Mono', monospace";
+Chart.defaults.font.size = 11;
+
+const gridOpts = {
+  color: 'rgba(255,255,255,0.04)',
+  drawBorder: false
+};
+
+// ── CHART 1: Revenue Bar ──────────────────────────────────────────────────────
+new Chart(document.getElementById('revenueBar'), {
+  type: 'bar',
+  data: {
+    labels: segments,
+    datasets: [{
+      data: segData.revenue,
+      backgroundColor: segments.map(s => colors[s] + '33'),
+      borderColor: segments.map(s => colors[s]),
+      borderWidth: 2,
+      borderRadius: 6,
+    }]
+  },
+  options: {
+    responsive: true,
+    plugins: {
+      legend: { display: false },
+      tooltip: {
+        callbacks: {
+          label: ctx => ' $' + (ctx.parsed.y / 1e6).toFixed(1) + 'M'
+        }
+      }
+    },
+    scales: {
+      x: { grid: gridOpts, ticks: { maxRotation: 30 } },
+      y: {
+        grid: gridOpts,
+        ticks: { callback: v => '$' + (v/1e6).toFixed(0) + 'M' }
+      }
+    }
+  }
+});
+
+// ── CHART 2: Revenue Donut ────────────────────────────────────────────────────
+new Chart(document.getElementById('revDonut'), {
+  type: 'doughnut',
+  data: {
+    labels: segments,
+    datasets: [{
+      data: segData.revShare,
+      backgroundColor: segments.map(s => colors[s] + '99'),
+      borderColor: segments.map(s => colors[s]),
+      borderWidth: 2,
+    }]
+  },
+  options: {
+    responsive: true,
+    cutout: '65%',
+    plugins: {
+      legend: {
+        position: 'right',
+        labels: { boxWidth: 10, padding: 12, font: { size: 10 } }
+      },
+      tooltip: {
+        callbacks: { label: ctx => ` ${ctx.label}: ${ctx.parsed}%` }
+      }
+    }
+  }
+});
+
+// ── CHART 3: Count vs Revenue ─────────────────────────────────────────────────
+new Chart(document.getElementById('countVsRev'), {
+  type: 'bar',
+  data: {
+    labels: segments,
+    datasets: [
+      {
+        label: 'Customers',
+        data: segData.customers,
+        backgroundColor: segments.map(s => colors[s] + '44'),
+        borderColor: segments.map(s => colors[s]),
+        borderWidth: 2,
+        borderRadius: 4,
+        yAxisID: 'y'
+      },
+      {
+        label: 'Revenue Share %',
+        data: segData.revShare,
+        type: 'line',
+        borderColor: '#ffd166',
+        backgroundColor: 'rgba(255,209,102,0.1)',
+        borderWidth: 2,
+        pointBackgroundColor: '#ffd166',
+        pointRadius: 4,
+        fill: true,
+        yAxisID: 'y1',
+        tension: 0.4
+      }
+    ]
+  },
+  options: {
+    responsive: true,
+    plugins: {
+      legend: { labels: { boxWidth: 10, font: { size: 10 } } }
+    },
+    scales: {
+      x: { grid: gridOpts, ticks: { maxRotation: 30 } },
+      y: { grid: gridOpts, position: 'left', title: { display: true, text: 'Customers' } },
+      y1: { grid: { display: false }, position: 'right', title: { display: true, text: 'Rev %' }, ticks: { callback: v => v + '%' } }
+    }
+  }
+});
+
+// ── CHART 4: Cross-Sell ───────────────────────────────────────────────────────
+new Chart(document.getElementById('crossSell'), {
+  type: 'bar',
+  data: {
+    labels: segments,
+    datasets: [{
+      data: segData.crossSell,
+      backgroundColor: segData.crossSell.map(v => v >= 1.0 ? 'rgba(255,107,107,0.4)' : v >= 0.7 ? 'rgba(255,209,102,0.4)' : 'rgba(6,214,160,0.3)'),
+      borderColor: segData.crossSell.map(v => v >= 1.0 ? '#ff6b6b' : v >= 0.7 ? '#ffd166' : '#06d6a0'),
+      borderWidth: 2,
+      borderRadius: 6,
+    }]
+  },
+  options: {
+    indexAxis: 'y',
+    responsive: true,
+    plugins: { legend: { display: false } },
+    scales: {
+      x: { grid: gridOpts },
+      y: { grid: { display: false } }
+    }
+  }
+});
+
+// ── CHART 5: Monthly Trend ────────────────────────────────────────────────────
+new Chart(document.getElementById('monthlyTrend'), {
+  type: 'line',
+  data: {
+    labels: monthlyLabels,
+    datasets: [
+      {
+        label: 'Champions',
+        data: championsMonthly,
+        borderColor: '#00e5ff',
+        backgroundColor: 'rgba(0,229,255,0.08)',
+        borderWidth: 2.5,
+        fill: true,
+        tension: 0.4,
+        pointRadius: 0,
+        pointHoverRadius: 5,
+      },
+      {
+        label: 'Loyal Customers',
+        data: loyalMonthly,
+        borderColor: '#06d6a0',
+        backgroundColor: 'rgba(6,214,160,0.05)',
+        borderWidth: 2,
+        fill: false,
+        tension: 0.4,
+        pointRadius: 0,
+      }
+    ]
+  },
+  options: {
+    responsive: true,
+    interaction: { mode: 'index', intersect: false },
+    plugins: {
+      legend: { labels: { boxWidth: 12, font: { size: 11 } } },
+      tooltip: { callbacks: { label: ctx => ` ${ctx.dataset.label}: $${(ctx.parsed.y/1e6).toFixed(1)}M` } }
+    },
+    scales: {
+      x: { grid: gridOpts },
+      y: { grid: gridOpts, ticks: { callback: v => '$' + (v/1e6).toFixed(0) + 'M' } }
+    }
+  }
+});
+
+// ── CHART 6: Avg Products ─────────────────────────────────────────────────────
+new Chart(document.getElementById('avgProducts'), {
+  type: 'bar',
+  data: {
+    labels: segments,
+    datasets: [{
+      data: segData.products,
+      backgroundColor: segments.map(s => colors[s] + '55'),
+      borderColor: segments.map(s => colors[s]),
+      borderWidth: 2,
+      borderRadius: 6,
+    }]
+  },
+  options: {
+    indexAxis: 'y',
+    responsive: true,
+    plugins: { legend: { display: false } },
+    scales: {
+      x: { grid: gridOpts, max: 7, ticks: { callback: v => v + '/7' } },
+      y: { grid: { display: false } }
+    }
+  }
+});
+
+// ── HEATMAP ───────────────────────────────────────────────────────────────────
+function getHeatColor(val) {
+  const r = Math.round(255 * (1 - val));
+  const g = Math.round(val * 200);
+  const b = Math.round(val * 100 + 50);
+  return `rgba(${r},${g},${b},0.8)`;
+}
+
+const hm = document.getElementById('heatmap');
+let hmHtml = `<table style="border-collapse:collapse;width:100%;font-family:'DM Mono',monospace;font-size:10px;">`;
+hmHtml += `<tr><th style="padding:6px 8px;color:#6b7a99;text-align:left;"></th>`;
+products.forEach(p => {
+  hmHtml += `<th style="padding:6px 6px;color:#6b7a99;text-align:center;writing-mode:vertical-rl;transform:rotate(180deg);height:80px;">${p}</th>`;
+});
+hmHtml += '</tr>';
+
+segments.forEach(seg => {
+  hmHtml += `<tr>`;
+  hmHtml += `<td style="padding:6px 10px;color:${colors[seg]};font-weight:600;white-space:nowrap;">${seg}</td>`;
+  affinityData[seg].forEach(val => {
+    const pct = Math.round(val * 100);
+    hmHtml += `<td style="padding:4px;text-align:center;">
+      <div style="background:${getHeatColor(val)};border-radius:6px;padding:6px 4px;color:white;font-weight:500;">${pct}%</div>
+    </td>`;
+  });
+  hmHtml += '</tr>';
+});
+hmHtml += '</table>';
+hm.innerHTML = hmHtml;
+
+// ── SEGMENT TABLE ─────────────────────────────────────────────────────────────
+const tbody = document.getElementById('segTableBody');
+const maxRev = Math.max(...segData.revenue);
+segments.forEach((seg, i) => {
+  const barWidth = Math.max(2, (segData.revenue[i] / maxRev) * 120);
+  const scoreColor = segData.crossSell[i] >= 1.0 ? '#ff6b6b' : segData.crossSell[i] >= 0.7 ? '#ffd166' : '#06d6a0';
+  tbody.innerHTML += `<tr>
+    <td><div class="seg-name"><span class="seg-dot" style="background:${colors[seg]}"></span>${seg}</div></td>
+    <td class="mono">${segData.customers[i]}</td>
+    <td>
+      <div class="rev-bar-wrap">
+        <div class="rev-bar" style="width:${barWidth}px;--bar-color:${colors[seg]}"></div>
+        <span class="mono">$${(segData.revenue[i]/1e6).toFixed(1)}M</span>
+      </div>
+    </td>
+    <td class="mono">${segData.revShare[i]}%</td>
+    <td class="mono">${segData.recency[i]}d</td>
+    <td class="mono">${segData.frequency[i]}</td>
+    <td class="mono">${segData.products[i]}/7</td>
+    <td><span class="score-pill" style="background:${scoreColor}22;color:${scoreColor};border:1px solid ${scoreColor}44">${segData.crossSell[i]}</span></td>
+    <td style="font-size:11px;color:#6b7a99;">${segData.strategies[i]}</td>
+  </tr>`;
+});
+
+// ── CROSS-SELL TABLE ──────────────────────────────────────────────────────────
+const csbody = document.getElementById('csTableBody');
+topCS.forEach(r => {
+  const sc = parseFloat(r.score);
+  const c = sc >= 1.5 ? '#ff6b6b' : sc >= 1.2 ? '#ffd166' : '#06d6a0';
+  csbody.innerHTML += `<tr>
+    <td style="font-family:'DM Mono',monospace;color:var(--accent)">${r.id}</td>
+    <td><span style="color:${colors[r.seg]};font-size:11px;font-weight:600;">${r.seg}</span></td>
+    <td style="color:#6b7a99;font-size:11px;">${r.ind}</td>
+    <td style="color:#6b7a99;font-size:11px;">${r.reg}</td>
+    <td style="font-family:'DM Mono',monospace;">${r.rev}</td>
+    <td style="font-family:'DM Mono',monospace;">${r.prod}/7</td>
+    <td><span class="score-pill" style="background:${c}22;color:${c};border:1px solid ${c}44">${r.score}</span></td>
+    <td style="color:#6b7a99;font-family:'DM Mono',monospace;font-size:11px;">${r.rm}</td>
+  </tr>`;
+});
+</script>
+</body>
+</html>
